@@ -1,0 +1,35 @@
+<svg width="640" height="320" viewBox="0 0 640 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- navy four-point stars -->
+  <g fill="#1C2A3A">
+    <path d="M120 150 L128 178 L156 186 L128 194 L120 222 L112 194 L84 186 L112 178 Z"/>
+    <path d="M520 100 L526 120 L546 126 L526 132 L520 152 L514 132 L494 126 L514 120 Z"/>
+  </g>
+
+  <!-- "Grayce" script wordmark -->
+  <text
+    x="320"
+    y="170"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-style="italic"
+    font-weight="600"
+    font-size="148"
+    fill="#7C8E6E"
+    text-anchor="middle"
+    letter-spacing="-4"
+  >Grayce</text>
+
+  <!-- thin gold rule -->
+  <line x1="180" y1="210" x2="460" y2="210" stroke="#C9A14A" stroke-width="1.5"/>
+
+  <!-- kerned caps subtitle -->
+  <text
+    x="320"
+    y="248"
+    font-family="'Inter', system-ui, sans-serif"
+    font-weight="500"
+    font-size="22"
+    fill="#2A3528"
+    text-anchor="middle"
+    letter-spacing="8"
+  >MEDICAL AESTHETICS</text>
+</svg>
