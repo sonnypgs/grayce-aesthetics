@@ -1,5 +1,6 @@
 import { images, clinic } from "@/lib/placeholders";
 import { ArrowRight, Phone } from "lucide-react";
+import Star from "./Star";
 
 export default function Hero() {
   return (
@@ -17,48 +18,71 @@ export default function Hero() {
         }}
       />
 
-      {/* gold foliage corner ornaments */}
+      {/* gold sparkle cluster — left corner */}
       <svg
         aria-hidden
-        className="absolute top-4 left-0 w-48 md:w-64 opacity-60 -z-10"
-        viewBox="0 0 240 200"
-        fill="none"
+        className="absolute top-4 left-0 w-56 md:w-80 opacity-80 -z-10"
+        viewBox="0 0 320 260"
+        fill="#C9A14A"
       >
-        <path
-          d="M10 180 Q 60 120 40 60 M40 60 Q 70 80 90 70 M40 60 Q 30 30 55 20 M10 180 Q 80 150 120 100 M120 100 Q 150 110 170 90 M120 100 Q 115 70 140 55"
-          stroke="#C9A14A"
-          strokeWidth="1.25"
-          strokeLinecap="round"
-          fill="none"
-        />
-        <circle cx="55" cy="20" r="3" fill="#C9A14A" />
-        <circle cx="90" cy="70" r="2.5" fill="#C9A14A" />
-        <circle cx="140" cy="55" r="3" fill="#C9A14A" />
-        <circle cx="170" cy="90" r="2.5" fill="#C9A14A" />
+        {/* stars: translate(x y) scale(s) */}
+        <g transform="translate(40 40) scale(1.8)">
+          <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
+        </g>
+        <g transform="translate(140 20) scale(1.1)">
+          <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
+        </g>
+        <g transform="translate(90 110) scale(2.4)">
+          <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
+        </g>
+        <g transform="translate(200 80) scale(0.9)">
+          <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
+        </g>
+        <g transform="translate(20 180) scale(1.3)">
+          <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
+        </g>
+        <g transform="translate(180 170) scale(1.6)">
+          <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
+        </g>
+        <g transform="translate(260 40) scale(1.2)">
+          <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
+        </g>
       </svg>
+
+      {/* gold sparkle cluster — right corner */}
       <svg
         aria-hidden
-        className="absolute top-10 right-0 w-48 md:w-64 opacity-60 -z-10"
-        viewBox="0 0 240 200"
-        fill="none"
+        className="absolute top-10 right-0 w-56 md:w-80 opacity-80 -z-10"
+        viewBox="0 0 320 260"
+        fill="#C9A14A"
       >
-        <path
-          d="M230 180 Q 180 120 200 60 M200 60 Q 170 80 150 70 M200 60 Q 210 30 185 20 M230 180 Q 160 150 120 100 M120 100 Q 90 110 70 90 M120 100 Q 125 70 100 55"
-          stroke="#C9A14A"
-          strokeWidth="1.25"
-          strokeLinecap="round"
-          fill="none"
-        />
-        <circle cx="185" cy="20" r="3" fill="#C9A14A" />
-        <circle cx="150" cy="70" r="2.5" fill="#C9A14A" />
-        <circle cx="100" cy="55" r="3" fill="#C9A14A" />
-        <circle cx="70" cy="90" r="2.5" fill="#C9A14A" />
+        <g transform="translate(260 30) scale(1.9)">
+          <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
+        </g>
+        <g transform="translate(170 20) scale(1.1)">
+          <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
+        </g>
+        <g transform="translate(210 110) scale(2.3)">
+          <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
+        </g>
+        <g transform="translate(90 70) scale(0.9)">
+          <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
+        </g>
+        <g transform="translate(280 180) scale(1.4)">
+          <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
+        </g>
+        <g transform="translate(120 170) scale(1.6)">
+          <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
+        </g>
+        <g transform="translate(30 50) scale(1.2)">
+          <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
+        </g>
       </svg>
 
       <div className="max-w-page mx-auto px-6 md:px-10 grid md:grid-cols-12 gap-10 md:gap-12 items-center relative">
         <div className="md:col-span-7">
           <div className="reveal reveal-1 inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-sage-soft/70 text-sage-deep text-[11px] font-semibold uppercase tracking-[0.18em]">
-            <span className="star-bullet" aria-hidden />
+            <Star className="text-navy" size={11} />
             Now open in Parañaque
           </div>
 

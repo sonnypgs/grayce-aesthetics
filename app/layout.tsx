@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, Pinyon_Script } from "next/font/google";
+import { Cormorant_Garamond, Inter, Pinyon_Script } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -9,7 +9,7 @@ const inter = Inter({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const fraunces = Fraunces({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${fraunces.variable} ${pinyon.variable}`}
+      className={`${inter.variable} ${cormorant.variable} ${pinyon.variable}`}
     >
       <body>{children}</body>
     </html>

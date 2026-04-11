@@ -1,4 +1,5 @@
 import { clinic } from "@/lib/placeholders";
+import Star from "./Star";
 import {
   Phone,
   Mail,
@@ -37,7 +38,7 @@ export default function Contact() {
           <div className="relative grid md:grid-cols-12 gap-10 md:gap-12 p-8 md:p-16">
             <div className="md:col-span-7">
               <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white border border-hairline text-sage-deep text-[11px] font-semibold uppercase tracking-[0.18em]">
-                <span className="star-bullet" aria-hidden />
+                <Star className="text-navy" size={11} />
                 Book a Consultation
               </div>
 

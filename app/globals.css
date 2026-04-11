@@ -89,24 +89,6 @@ h2.font-display {
   color: var(--ink-muted);
 }
 
-/* Four-point navy star glyph — used as bullet / ornament */
-.star-bullet {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: var(--navy);
-  clip-path: polygon(
-    50% 0%,
-    58% 42%,
-    100% 50%,
-    58% 58%,
-    50% 100%,
-    42% 58%,
-    0% 50%,
-    42% 42%
-  );
-}
-
 @keyframes reveal {
   from {
     opacity: 0;

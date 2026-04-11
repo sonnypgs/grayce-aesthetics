@@ -1,3 +1,5 @@
+import Star from "./Star";
+
 type Props = {
   eyebrow: string;
   title: string;
@@ -19,7 +21,7 @@ export default function SectionHeading({
           align === "center" ? "justify-center" : ""
         }`}
       >
-        <span className="star-bullet" aria-hidden />
+        <Star className="text-navy" size={11} />
         {eyebrow}
       </div>
       <h2 className="font-display text-[2.25rem] sm:text-5xl md:text-[3.5rem] leading-[1.05] text-ink mt-5">
