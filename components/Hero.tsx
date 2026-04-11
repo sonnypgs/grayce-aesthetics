@@ -21,7 +21,7 @@ export default function Hero() {
       {/* gold sparkle cluster — left corner */}
       <svg
         aria-hidden
-        className="absolute top-4 left-0 w-56 md:w-80 opacity-80 -z-10"
+        className="absolute top-2 -left-4 w-32 sm:w-44 md:top-4 md:left-0 md:w-80 opacity-70 md:opacity-80 -z-10"
         viewBox="0 0 320 260"
         fill="#C9A14A"
       >
@@ -52,7 +52,7 @@ export default function Hero() {
       {/* gold sparkle cluster — right corner */}
       <svg
         aria-hidden
-        className="absolute top-10 right-0 w-56 md:w-80 opacity-80 -z-10"
+        className="absolute top-2 -right-4 w-32 sm:w-44 md:top-10 md:right-0 md:w-80 opacity-70 md:opacity-80 -z-10"
         viewBox="0 0 320 260"
         fill="#C9A14A"
       >
