@@ -1,12 +1,7 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="512" height="512" rx="96" fill="#FAF6EF"/>
-  <text x="256" y="330" font-family="Georgia, serif" font-size="320" font-style="italic" font-weight="600" fill="#7C8E6E" text-anchor="middle">G</text>
-  <g fill="#1C2A3A">
-    <g transform="translate(72 72) scale(2.4)">
-      <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
-    </g>
-    <g transform="translate(384 360) scale(2.4)">
-      <path d="M12 0 C 13 9 15 11 24 12 C 15 13 13 15 12 24 C 11 15 9 13 0 12 C 9 11 11 9 12 0 Z"/>
-    </g>
-  </g>
+  <rect width="512" height="512" rx="96" fill="#FFEEDC"/>
+  <path d="M135 402V220c0-91 74-165 165-165h20c91 0 165 74 165 165v182h-38V220c0-70-57-127-127-127h-20c-70 0-127 57-127 127v182h-38Z" fill="#947F64"/>
+  <path d="M162 259c0-72 31-135 116-135 46 0 84 22 98 55l-18 17c-12-30-50-46-76-46-48 0-80 47-80 109 0 64 30 111 84 111 19 0 38-7 55-19v-46h-34v-31h76v92c-22 23-58 39-98 39-74 0-123-55-123-146Z" fill="#4B594C"/>
+  <path d="M347 274h67v31h-67v-31Z" fill="#4B594C"/>
+  <path d="M394 274V167h58v107h-22v-80h-14v80h-22Z" fill="#4B594C"/>
 </svg>

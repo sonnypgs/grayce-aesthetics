@@ -1,85 +1,63 @@
+import { ArrowUpRight } from "lucide-react";
+import { bookingHref, isExternalBooking, serviceGroups } from "@/lib/site";
 import SectionHeading from "./SectionHeading";
-import {
-  Sparkles,
-  Droplet,
-  Sun,
-  Leaf,
-  Wand2,
-  HeartHandshake,
-  ArrowUpRight,
-} from "lucide-react";
-
-const services = [
-  {
-    icon: Sparkles,
-    title: "Signature Facials & Skincare",
-    blurb:
-      "Medical-grade facials, peels, and deep-cleansing rituals designed around your skin analysis and pace of life.",
-  },
-  {
-    icon: Droplet,
-    title: "Injectables",
-    blurb:
-      "Toxin and dermal filler treatments placed with a light, anatomical hand — refreshed, never frozen.",
-  },
-  {
-    icon: Sun,
-    title: "Laser & Light",
-    blurb:
-      "Pigmentation, redness, texture, and hair reduction — handled with modern energy-based platforms.",
-  },
-  {
-    icon: Wand2,
-    title: "Body Contouring",
-    blurb:
-      "Non-invasive body treatments to tone, tighten, and smooth — paired with realistic, staged plans.",
-  },
-  {
-    icon: Leaf,
-    title: "Skin Analysis & Plans",
-    blurb:
-      "A proper consultation, a proper diagnosis, and a treatment plan you actually understand before we begin.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Memberships",
-    blurb:
-      "Thoughtful care packages for clients who want their skin looked after on a steady, unhurried cadence.",
-  },
-];
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 md:py-32 bg-bg-alt scroll-mt-24">
+    <section id="services" className="scroll-mt-24 bg-bg-alt py-24 md:py-32">
       <div className="max-w-page mx-auto px-6 md:px-10">
-        <SectionHeading
-          eyebrow="Services"
-          title="A considered menu, not a catalog."
-          intro="Every visit at Grayce begins with a conversation. These are the core services we offer — each one tailored, each one explained, each one led by Dr. Braga."
-        />
-
-        <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {services.map(({ icon: Icon, title, blurb }) => (
-            <article
-              key={title}
-              className="group relative bg-white border border-hairline rounded-3xl p-7 hover:shadow-soft-lg hover:-translate-y-1 hover:border-transparent transition-all duration-500"
+        <div className="grid gap-10 md:grid-cols-12 md:items-end">
+          <div className="md:col-span-8">
+            <SectionHeading
+              eyebrow="Treatments"
+              title="A focused menu, selected after consultation."
+              intro="The public menu is intentionally category-led. Dr. Braga confirms the exact plan, sequence, and suitability after skin assessment."
+            />
+          </div>
+          <div className="md:col-span-4 md:text-right">
+            <a
+              href={bookingHref}
+              target={isExternalBooking ? "_blank" : undefined}
+              rel={isExternalBooking ? "noopener noreferrer" : undefined}
+              className="inline-flex h-12 items-center gap-2 rounded-full border border-hairline bg-[var(--surface)] px-6 font-medium text-[#243028] transition-colors hover:border-gold"
             >
-              <div className="flex items-start justify-between">
-                <span className="w-12 h-12 rounded-2xl bg-sage-soft/70 flex items-center justify-center text-sage-deep">
-                  <Icon size={20} strokeWidth={1.75} />
-                </span>
-                <ArrowUpRight
-                  size={18}
-                  strokeWidth={1.75}
-                  className="text-ink-muted opacity-0 group-hover:opacity-100 group-hover:text-sage-deep transition-all duration-300 -translate-x-1 group-hover:translate-x-0"
+              Book Appointment
+              <ArrowUpRight size={16} strokeWidth={2} />
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {serviceGroups.map((service, index) => (
+            <article
+              key={service.title}
+              className="group surface-panel overflow-hidden rounded-[1.75rem] border border-hairline shadow-soft transition duration-500 hover:-translate-y-1 hover:shadow-soft-lg"
+            >
+              <div className="relative aspect-[4/3] overflow-hidden bg-bg-soft">
+                <img
+                  src={service.image}
+                  alt=""
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
                 />
               </div>
-              <h3 className="font-display text-xl font-semibold leading-snug text-ink mt-6">
-                {title}
-              </h3>
-              <p className="mt-3 text-ink-muted leading-relaxed text-[15px]">
-                {blurb}
-              </p>
+              <div className="p-6">
+                <div className="mb-5 flex items-center justify-between">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#947f64]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <ArrowUpRight
+                    size={18}
+                    strokeWidth={1.75}
+                    className="text-[#947f64]"
+                  />
+                </div>
+                <h3 className="font-display text-2xl font-semibold leading-tight text-[#243028]">
+                  {service.title}
+                </h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-[#65705f]">
+                  {service.summary}
+                </p>
+              </div>
             </article>
           ))}
         </div>

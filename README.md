@@ -1,6 +1,6 @@
 # Grayce Medical Aesthetics
 
-One-page marketing site for **Grayce Medical Aesthetics** — the boutique aesthetics clinic of Dr. Mary Grace Braga in Parañaque City.
+One-page marketing site for **Grayce Medical Aesthetic Clinic** — the physician-led aesthetics clinic of Dr. Mary Grace Braga in Parañaque City.
 
 ## Stack
 
@@ -15,6 +15,11 @@ pnpm install
 pnpm dev            # http://localhost:3000
 pnpm build          # static export to ./out
 ```
+
+## Booking
+
+Set `NEXT_PUBLIC_FRESHA_BOOKING_URL` to the clinic's Fresha direct booking URL.
+When it is not set, appointment CTAs fall back to the contact section.
 
 ## Deployment
 

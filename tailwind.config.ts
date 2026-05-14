@@ -36,11 +36,11 @@ const config: Config = {
       },
       boxShadow: {
         soft:
-          "0 1px 2px rgba(42, 53, 40, 0.04), 0 8px 24px -12px rgba(42, 53, 40, 0.10)",
+          "0 1px 2px rgb(var(--shadow-rgb) / 0.06), 0 8px 24px -12px rgb(var(--shadow-rgb) / 0.16)",
         "soft-lg":
-          "0 2px 4px rgba(42, 53, 40, 0.03), 0 24px 56px -20px rgba(42, 53, 40, 0.14)",
+          "0 2px 4px rgb(var(--shadow-rgb) / 0.05), 0 24px 56px -20px rgb(var(--shadow-rgb) / 0.22)",
         "soft-xl":
-          "0 4px 8px rgba(42, 53, 40, 0.04), 0 40px 80px -24px rgba(42, 53, 40, 0.18)",
+          "0 4px 8px rgb(var(--shadow-rgb) / 0.06), 0 40px 80px -24px rgb(var(--shadow-rgb) / 0.26)",
       },
     },
   },

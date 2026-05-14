@@ -1,133 +1,111 @@
+import { Car, Clock, MapPin } from "lucide-react";
+import { clinic, mapQuery } from "@/lib/site";
 import SectionHeading from "./SectionHeading";
-import { clinic } from "@/lib/placeholders";
-import { MapPin, Clock, Car } from "lucide-react";
 
 export default function Visit() {
-  // Parañaque City default bbox — will be tightened once the real address lands
-  const bbox = "121.0098,14.4713,121.0298,14.4873";
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
 
   return (
-    <section id="visit" className="py-24 md:py-32 scroll-mt-24 bg-bg">
+    <section id="visit" className="scroll-mt-24 bg-bg py-24 md:py-32">
       <div className="max-w-page mx-auto px-6 md:px-10">
         <SectionHeading
-          eyebrow="Visit Us"
-          title="Easy to find. Easy to feel at home."
+          eyebrow="Visit"
+          title="Find us in San Antonio Valley 1."
+          intro="Appointments are handled directly through the clinic, with online Fresha booking ready to connect once the final booking link is available."
         />
 
-        <div className="mt-14 grid md:grid-cols-12 gap-8 md:gap-10">
-          <div className="md:col-span-5 space-y-8">
-            <div className="bg-white border border-hairline rounded-3xl p-7">
-              <div className="flex items-center gap-3">
-                <span className="w-10 h-10 rounded-2xl bg-sage-soft/70 flex items-center justify-center text-sage-deep">
-                  <MapPin size={16} strokeWidth={1.75} />
-                </span>
-                <span className="text-[11px] uppercase tracking-[0.18em] font-semibold text-ink-muted">
-                  Address
-                </span>
+        <div className="mt-14 grid gap-8 md:grid-cols-12">
+          <div className="space-y-5 md:col-span-5">
+            <div className="surface-panel rounded-[1.5rem] border border-hairline p-6 shadow-soft">
+              <div className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#947f64]">
+                <MapPin size={15} />
+                Address
               </div>
-              <div className="mt-4 font-display text-xl text-ink font-semibold leading-snug">
+              <address className="mt-4 not-italic font-display text-2xl font-semibold leading-tight text-[#243028]">
                 {clinic.contact.address.line1}
                 <br />
                 {clinic.contact.address.line2}
-              </div>
-              <div className="text-ink-muted text-sm mt-1">
-                {clinic.contact.address.region}
-              </div>
+                <br />
+                {clinic.contact.address.line3}
+              </address>
+              <p className="mt-2 text-sm text-[#65705f]">
+                {clinic.contact.address.country}
+              </p>
+              <a
+                href={mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex h-11 items-center rounded-full bg-[#4b594c] px-5 text-sm font-medium text-[#ffeedc]"
+              >
+                Open in Maps
+              </a>
             </div>
 
-            <div className="bg-white border border-hairline rounded-3xl p-7">
-              <div className="flex items-center gap-3">
-                <span className="w-10 h-10 rounded-2xl bg-sage-soft/70 flex items-center justify-center text-sage-deep">
-                  <Clock size={16} strokeWidth={1.75} />
-                </span>
-                <span className="text-[11px] uppercase tracking-[0.18em] font-semibold text-ink-muted">
-                  Hours
-                </span>
+            <div className="surface-panel rounded-[1.5rem] border border-hairline p-6 shadow-soft">
+              <div className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#947f64]">
+                <Clock size={15} />
+                Hours
               </div>
               <dl className="mt-4">
-                {clinic.contact.hours.map((h, i) => (
+                {clinic.contact.hours.map((hour) => (
                   <div
-                    key={h.day}
-                    className={`flex items-baseline justify-between py-3 ${
-                      i !== clinic.contact.hours.length - 1
-                        ? "border-b border-hairline"
-                        : ""
-                    }`}
+                    key={hour.day}
+                    className="flex items-baseline justify-between gap-5 border-b border-[rgba(75,89,76,0.12)] py-3 last:border-b-0"
                   >
-                    <dt className="text-ink text-[15px]">{h.day}</dt>
-                    <dd className="text-ink-muted tabular-nums text-[15px]">
-                      {h.time}
+                    <dt className="text-sm text-[#243028]">{hour.day}</dt>
+                    <dd className="text-right text-sm text-[#65705f]">
+                      {hour.time}
                     </dd>
                   </div>
                 ))}
               </dl>
             </div>
 
-            <div className="bg-white border border-hairline rounded-3xl p-7">
-              <div className="flex items-center gap-3">
-                <span className="w-10 h-10 rounded-2xl bg-sage-soft/70 flex items-center justify-center text-sage-deep">
-                  <Car size={16} strokeWidth={1.75} />
-                </span>
-                <span className="text-[11px] uppercase tracking-[0.18em] font-semibold text-ink-muted">
-                  Getting Here
-                </span>
+            <div className="surface-panel rounded-[1.5rem] border border-hairline p-6 shadow-soft">
+              <div className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#947f64]">
+                <Car size={15} />
+                Arrival
               </div>
-              <p className="mt-4 text-ink-muted text-[15px] leading-relaxed">
-                {/* TODO: replace with real directions */}
-                On-site parking is available. The clinic is a short drive from
-                SM City Parañaque and major access points along the
-                Sucat–Dr. A. Santos corridor.
+              <p className="mt-4 text-sm leading-relaxed text-[#65705f]">
+                Search for Grayce Medical Aesthetic Clinic or GF Asher Bldg. on
+                Nuestra Sra. De Lourdes Ave. for the most direct route.
               </p>
             </div>
           </div>
 
           <div className="md:col-span-7">
-            <div className="relative aspect-[4/3] md:aspect-auto md:h-full md:min-h-[520px] overflow-hidden rounded-[2rem] shadow-soft-lg bg-bg-soft">
-              <iframe
-                title="Map of Grayce Medical Aesthetics"
-                src={`https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik`}
-                className="absolute inset-0 w-full h-full border-0 pointer-events-none"
-                style={{
-                  filter: "grayscale(1) contrast(1.08) brightness(1.02)",
-                }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-
+            <div className="relative flex min-h-[520px] overflow-hidden rounded-[2rem] border border-hairline bg-[#4b594c] p-8 text-[#ffeedc] shadow-soft-lg">
               <div
                 aria-hidden
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-full pointer-events-none"
-              >
-                <svg
-                  width="52"
-                  height="66"
-                  viewBox="0 0 52 66"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  style={{
-                    filter:
-                      "drop-shadow(0 8px 18px rgba(42, 53, 40, 0.45))",
-                  }}
+                className="absolute inset-0 opacity-20"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(90deg, #ffeedc 1px, transparent 1px), linear-gradient(0deg, #ffeedc 1px, transparent 1px)",
+                  backgroundSize: "44px 44px",
+                }}
+              />
+              <div className="relative mt-auto max-w-lg">
+                <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-full border border-[#ffeedc]/30 bg-[#ffeedc] text-[#4b594c] shadow-soft">
+                  <MapPin size={26} strokeWidth={1.8} />
+                </div>
+                <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#ffeedc]/70">
+                  Map Preview
+                </div>
+                <h3 className="font-display mt-4 text-4xl leading-tight md:text-5xl">
+                  GF Asher Bldg., Nuestra Sra. De Lourdes Ave.
+                </h3>
+                <p className="mt-5 max-w-md text-sm leading-relaxed text-[#ffeedc]/78">
+                  Open the live map for the most accurate route to San Antonio
+                  Valley 1, Parañaque City.
+                </p>
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-7 inline-flex h-11 items-center rounded-full bg-[#ffeedc] px-5 text-sm font-medium text-[#4b594c]"
                 >
-                  <path
-                    d="M26 4C14.95 4 6 12.95 6 24c0 14 20 38 20 38s20-24 20-38c0-11.05-8.95-20-20-20z"
-                    fill="#C9A14A"
-                    stroke="#556148"
-                    strokeWidth="3"
-                    strokeLinejoin="round"
-                  />
-                  <circle cx="26" cy="24" r="7" fill="#556148" />
-                </svg>
-              </div>
-
-              <div className="absolute bottom-4 left-4 z-10 inline-flex items-center gap-2 px-3.5 py-2 bg-white/95 backdrop-blur-md rounded-full border border-hairline shadow-soft">
-                <span className="w-1.5 h-1.5 rounded-full bg-sage" />
-                <span className="text-[11px] font-semibold text-ink">
-                  Grayce Medical Aesthetics
-                </span>
-                <span className="text-[11px] text-ink-muted">
-                  · Parañaque
-                </span>
+                  Open Live Map
+                </a>
               </div>
             </div>
           </div>

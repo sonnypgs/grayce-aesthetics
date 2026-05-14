@@ -3,19 +3,66 @@
 @tailwind utilities;
 
 :root {
-  --bg: #faf6ef;
-  --bg-alt: #f2ece0;
-  --bg-soft: #ebe3d3;
-  --ink: #2a3528;
-  --ink-muted: #6b7564;
-  --sage: #7c8e6e;
-  --sage-deep: #556148;
-  --sage-soft: #dde4d2;
-  --gold: #c9a14a;
-  --gold-deep: #9c7a2d;
-  --gold-soft: #f3e9c8;
-  --navy: #1c2a3a;
-  --hairline: #e4dccb;
+  --almond: #ffeedc;
+  --taupe: #947f64;
+  --green: #4b594c;
+  --bg: #ffeedc;
+  --bg-alt: #f8e4cf;
+  --bg-soft: #fff7ed;
+  --surface: #fffaf2;
+  --surface-strong: #ffffff;
+  --ink: #243028;
+  --ink-muted: #66705f;
+  --sage: #4b594c;
+  --sage-deep: #354238;
+  --sage-soft: rgba(75, 89, 76, 0.1);
+  --gold: #947f64;
+  --gold-deep: #715f49;
+  --gold-soft: rgba(148, 127, 100, 0.15);
+  --navy: #4b594c;
+  --hairline: rgba(75, 89, 76, 0.18);
+  --logo-panel: #ffeedc;
+  --shadow-rgb: 75 89 76;
+}
+
+html[data-theme="green"] {
+  --bg: #4b594c;
+  --bg-alt: #415044;
+  --bg-soft: #586653;
+  --surface: #ffeedc;
+  --surface-strong: #fff8ee;
+  --ink: #ffeedc;
+  --ink-muted: rgba(255, 238, 220, 0.76);
+  --sage: #ffeedc;
+  --sage-deep: #ffeedc;
+  --sage-soft: rgba(255, 238, 220, 0.12);
+  --gold: #c5ad8f;
+  --gold-deep: #ffeedc;
+  --gold-soft: rgba(255, 238, 220, 0.18);
+  --navy: #ffeedc;
+  --hairline: rgba(255, 238, 220, 0.22);
+  --logo-panel: #4b594c;
+  --shadow-rgb: 19 28 22;
+}
+
+html[data-theme="taupe"] {
+  --bg: #947f64;
+  --bg-alt: #856f56;
+  --bg-soft: #a59073;
+  --surface: #ffeedc;
+  --surface-strong: #fff8ee;
+  --ink: #ffeedc;
+  --ink-muted: rgba(255, 238, 220, 0.78);
+  --sage: #4b594c;
+  --sage-deep: #314037;
+  --sage-soft: rgba(255, 238, 220, 0.14);
+  --gold: #ffeedc;
+  --gold-deep: #4b594c;
+  --gold-soft: rgba(75, 89, 76, 0.16);
+  --navy: #4b594c;
+  --hairline: rgba(255, 238, 220, 0.25);
+  --logo-panel: #947f64;
+  --shadow-rgb: 45 37 28;
 }
 
 html {
@@ -35,6 +82,19 @@ body {
   overflow-x: hidden;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 80;
+  opacity: 0.05;
+  background-image:
+    linear-gradient(90deg, currentColor 1px, transparent 1px),
+    linear-gradient(0deg, currentColor 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
 ::selection {
   background: var(--sage-soft);
   color: var(--ink);
@@ -49,13 +109,13 @@ body {
 .font-display {
   font-family: var(--font-display), Georgia, serif;
   font-weight: 500;
-  letter-spacing: -0.015em;
+  letter-spacing: 0;
 }
 
 h1.font-display,
 h2.font-display {
   font-weight: 600;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
 }
 
 .font-script {
@@ -87,6 +147,28 @@ h2.font-display {
   font-weight: 500;
   letter-spacing: 0.02em;
   color: var(--ink-muted);
+}
+
+.surface-panel {
+  background: var(--surface);
+  color: #243028;
+}
+
+.surface-panel .text-ink {
+  color: #243028;
+}
+
+.surface-panel .text-ink-muted {
+  color: #65705f;
+}
+
+.brand-logo-panel {
+  background: var(--logo-panel);
+}
+
+.editorial-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--hairline), transparent);
 }
 
 @keyframes reveal {
@@ -139,6 +221,17 @@ h2.font-display {
   height: 1px;
   background: var(--gold);
   transition: right 350ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.image-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, transparent 55%, rgba(0, 0, 0, 0.22)),
+    radial-gradient(circle at 20% 10%, rgba(255, 238, 220, 0.2), transparent 30%);
+  mix-blend-mode: multiply;
 }
 .link-underline:hover::after,
 .link-underline:focus-visible::after {

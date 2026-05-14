@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter, Pinyon_Script } from "next/font/google";
+import { brand, clinic } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -25,14 +26,20 @@ const pinyon = Pinyon_Script({
 });
 
 export const metadata: Metadata = {
-  title: "Grayce Medical Aesthetics — Dr. Mary Grace Braga, Parañaque",
+  metadataBase: new URL("https://grayce-aesthetics.com"),
+  title: "Grayce Medical Aesthetic Clinic | Parañaque",
   description:
-    "Boutique medical aesthetics clinic in Parañaque City, led by Dr. Mary Grace Braga. Refined skincare, injectables, and laser treatments in an elegant, unhurried setting.",
+    "Physician-led medical aesthetic clinic in Parañaque City, led by Dr. Mary Grace Braga.",
+  icons: {
+    icon: "/assets/grayce/brand/monogram-transparent.png",
+    apple: "/assets/grayce/brand/social-profile.png",
+  },
   openGraph: {
-    title: "Grayce Medical Aesthetics",
+    title: brand.name,
     description:
-      "Boutique medical aesthetics clinic in Parañaque City, led by Dr. Mary Grace Braga.",
+      `Physician-led medical aesthetic clinic in Parañaque City, led by ${clinic.doctor.displayName}.`,
     type: "website",
+    images: ["/assets/grayce/brand/social-cover.png"],
   },
 };
 
@@ -45,8 +52,17 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} ${cormorant.variable} ${pinyon.variable}`}
+      data-theme="almond"
     >
-      <body>{children}</body>
+      <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{var t=localStorage.getItem('grayce-theme');if(t==='green'||t==='taupe'||t==='almond'){document.documentElement.dataset.theme=t}}catch(e){}",
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

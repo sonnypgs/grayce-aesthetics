@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { bookingHref, isExternalBooking } from "@/lib/site";
+import BrandLogo from "./BrandLogo";
 
 const links = [
   { href: "#about", label: "About" },
   { href: "#services", label: "Services" },
-  { href: "#clinic", label: "The Clinic" },
+  { href: "#clinic", label: "Clinic" },
   { href: "#gallery", label: "Gallery" },
   { href: "#visit", label: "Visit" },
 ];
@@ -29,15 +31,12 @@ export default function Nav() {
       }`}
     >
       <div className="max-w-page mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-3 group">
-          <span className="flex flex-col leading-none">
-            <span className="font-display italic text-sage text-[26px] md:text-[30px] font-semibold tracking-tight">
-              Grayce
-            </span>
-            <span className="text-[9px] md:text-[10px] uppercase tracking-[0.22em] text-ink mt-0.5">
-              Medical Aesthetics
-            </span>
-          </span>
+        <a
+          href="#top"
+          className="brand-logo-panel flex h-12 w-[148px] items-center justify-center rounded-full border border-hairline px-3 shadow-soft"
+          aria-label="Grayce Medical Aesthetic Clinic home"
+        >
+          <BrandLogo className="h-9 w-full object-contain" />
         </a>
 
         <nav className="hidden lg:flex items-center gap-8 text-[14px] text-ink-muted font-medium">
@@ -53,10 +52,12 @@ export default function Nav() {
         </nav>
 
         <a
-          href="#contact"
-          className="group inline-flex items-center gap-2 h-11 px-5 rounded-full bg-sage text-white text-sm font-medium hover:bg-sage-deep transition-colors"
+          href={bookingHref}
+          target={isExternalBooking ? "_blank" : undefined}
+          rel={isExternalBooking ? "noopener noreferrer" : undefined}
+          className="group inline-flex h-11 items-center gap-2 rounded-full bg-sage px-5 text-sm font-medium text-[var(--bg)] transition-colors hover:bg-sage-deep"
         >
-          Book a Consultation
+          Book Appointment
           <span
             aria-hidden
             className="transition-transform group-hover:translate-x-0.5"
