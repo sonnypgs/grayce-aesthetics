@@ -13,12 +13,10 @@ export const brand = {
     green: "#4b594c",
   },
   logos: {
-    lockup: "/assets/grayce/brand/logo-lockup-on-almond.svg",
-    monogram: "/assets/grayce/brand/logo-monogram-on-almond.svg",
-    lightOnGreen: "/assets/grayce/brand/logo-light-on-green.svg",
-    lightOnTaupe: "/assets/grayce/brand/logo-light-on-taupe.svg",
-    transparentWordmark: "/assets/grayce/brand/wordmark-transparent.png",
-    transparentMonogram: "/assets/grayce/brand/monogram-transparent.png",
+    lockup: "/assets/grayce/brand/logo-full-lockup.png",
+    lockupLight: "/assets/grayce/brand/logo-full-lockup-light.png",
+    wordmark: "/assets/grayce/brand/logo-wordmark.png",
+    monogram: "/assets/grayce/brand/monogram-transparent.png",
   },
 };
 

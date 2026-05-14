@@ -52,15 +52,8 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} ${cormorant.variable} ${pinyon.variable}`}
-      data-theme="almond"
     >
       <body>
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              "try{var t=localStorage.getItem('grayce-theme');if(t==='green'||t==='taupe'||t==='almond'){document.documentElement.dataset.theme=t}}catch(e){}",
-          }}
-        />
         {children}
       </body>
     </html>

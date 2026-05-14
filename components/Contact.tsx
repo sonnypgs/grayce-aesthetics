@@ -24,7 +24,7 @@ export default function Contact() {
       <div className="max-w-page mx-auto px-6 md:px-10">
         <div className="grid overflow-hidden rounded-[2.5rem] border border-hairline bg-[var(--surface)] shadow-soft-xl md:grid-cols-12">
           <div className="bg-[#4b594c] p-8 text-[#ffeedc] md:col-span-5 md:p-12">
-            <BrandLogo className="h-28 w-52 object-contain" />
+            <BrandLogo tone="light" className="h-32 w-56 object-contain" />
             <h2 className="font-display mt-10 text-5xl leading-none md:text-6xl">
               Ready for a careful consultation?
             </h2>

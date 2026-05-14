@@ -30,13 +30,13 @@ export default function Nav() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-page mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+      <div className="max-w-page mx-auto flex h-16 items-center justify-between gap-3 px-4 sm:h-20 sm:px-6 md:px-10">
         <a
           href="#top"
-          className="brand-logo-panel flex h-12 w-[148px] items-center justify-center rounded-full border border-hairline px-3 shadow-soft"
+          className="brand-logo-panel flex h-11 w-[116px] shrink-0 items-center justify-center rounded-full border border-hairline px-3 shadow-soft sm:h-12 sm:w-[148px]"
           aria-label="Grayce Medical Aesthetic Clinic home"
         >
-          <BrandLogo className="h-9 w-full object-contain" />
+          <BrandLogo mark="wordmark" className="h-8 w-full object-contain sm:h-9" />
         </a>
 
         <nav className="hidden lg:flex items-center gap-8 text-[14px] text-ink-muted font-medium">
@@ -55,9 +55,10 @@ export default function Nav() {
           href={bookingHref}
           target={isExternalBooking ? "_blank" : undefined}
           rel={isExternalBooking ? "noopener noreferrer" : undefined}
-          className="group inline-flex h-11 items-center gap-2 rounded-full bg-sage px-5 text-sm font-medium text-[var(--bg)] transition-colors hover:bg-sage-deep"
+          className="group inline-flex h-11 shrink-0 items-center gap-1.5 rounded-full bg-sage px-4 text-sm font-medium text-[var(--bg)] transition-colors hover:bg-sage-deep sm:gap-2 sm:px-5"
         >
-          Book Appointment
+          <span className="sm:hidden">Book</span>
+          <span className="hidden sm:inline">Book Appointment</span>
           <span
             aria-hidden
             className="transition-transform group-hover:translate-x-0.5"

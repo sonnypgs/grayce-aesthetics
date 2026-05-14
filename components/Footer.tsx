@@ -20,7 +20,7 @@ export default function Footer() {
       <div className="max-w-page mx-auto px-6 md:px-10">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-5">
-            <div className="brand-logo-panel flex h-24 w-56 items-center justify-center rounded-[2rem] border border-hairline p-4 shadow-soft">
+            <div className="brand-logo-panel flex h-28 w-56 items-center justify-center rounded-[2rem] border border-hairline p-4 shadow-soft">
               <BrandLogo className="h-full w-full object-contain" />
             </div>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed text-ink-muted">
@@ -83,7 +83,6 @@ export default function Footer() {
           <div>
             © {year} {brand.name}. All rights reserved.
           </div>
-          <div>Preview theme switcher active for review.</div>
         </div>
       </div>
     </footer>

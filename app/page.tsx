@@ -7,7 +7,6 @@ import Gallery from "@/components/Gallery";
 import Visit from "@/components/Visit";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export default function Page() {
   return (
@@ -23,7 +22,6 @@ export default function Page() {
         <Contact />
       </main>
       <Footer />
-      <ThemeSwitcher />
     </>
   );
 }
