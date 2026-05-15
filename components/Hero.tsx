@@ -11,7 +11,7 @@ export default function Hero() {
     >
       <div className="max-w-page mx-auto px-6 md:px-10">
         <div className="grid gap-10 md:grid-cols-12 md:items-center">
-          <div className="md:col-span-6">
+          <div className="hero-copy md:col-span-6">
             <div className="reveal reveal-1 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-muted">
               <span className="h-px w-10 bg-gold" />
               Physician-led aesthetic care
@@ -54,7 +54,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="md:col-span-6">
+          <div className="hero-media md:col-span-6">
             <div className="reveal reveal-3 relative grid gap-4 pb-8 md:grid-cols-8 md:pb-14">
               <figure className="image-grain relative aspect-[4/3] overflow-hidden rounded-t-[5rem] rounded-b-[2rem] border border-hairline bg-bg-soft shadow-soft-xl md:col-span-8 md:aspect-[5/4] md:rounded-t-[7rem]">
                 <img
