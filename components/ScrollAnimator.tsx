@@ -4,7 +4,9 @@ import { useEffect } from "react";
 
 export default function ScrollAnimator() {
   useEffect(() => {
-    const sections = Array.from(document.querySelectorAll("main > section"));
+    const sections = Array.from(
+      document.querySelectorAll("main > section:not(#top)"),
+    );
 
     document.body.classList.add("motion-ready");
     sections.forEach((section) => section.classList.add("section-reveal"));
