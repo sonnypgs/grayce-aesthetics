@@ -3,7 +3,7 @@ import { brand, clinic } from "@/lib/site";
 import BrandLogo from "./BrandLogo";
 
 const links = [
-  { href: "#about", label: "About" },
+  { href: "#about", label: "Doctor" },
   { href: "#services", label: "Treatments" },
   { href: "#clinic", label: "Clinic" },
   { href: "#gallery", label: "Gallery" },
@@ -16,7 +16,7 @@ export default function Footer() {
   const ig = `https://instagram.com/${clinic.contact.instagram.replace("@", "")}`;
 
   return (
-    <footer className="border-t border-hairline bg-bg py-12">
+    <footer className="section-gradient-soft border-t border-hairline py-12">
       <div className="max-w-page mx-auto px-6 md:px-10">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-5">

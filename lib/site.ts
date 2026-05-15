@@ -75,6 +75,7 @@ export const photos = {
   coolingLaser: "/assets/grayce/photos/cooling-laser-treatment.jpg",
   reception: "/assets/grayce/photos/clinic-reception-mockup.jpg",
   coolingCloseup: "/assets/grayce/photos/cooling-procedure-closeup.jpg",
+  doctorPortrait: "/assets/grayce/photos/dr-mary-grace-braga.jpg",
   facialHandpiece: "/assets/grayce/photos/facial-handpiece.jpg",
   hydrafacialHandpiece: "/assets/grayce/photos/hydrafacial-handpiece.jpg",
   hydrafacialDevice: "/assets/grayce/photos/hydrafacial-device.jpg",

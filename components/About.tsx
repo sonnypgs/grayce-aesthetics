@@ -6,19 +6,19 @@ const icons = [GraduationCap, Stethoscope, ShieldCheck, Award];
 
 export default function About() {
   return (
-    <section id="about" className="scroll-mt-24 bg-bg py-24 md:py-32">
-      <div className="max-w-page mx-auto grid gap-12 px-6 md:grid-cols-12 md:px-10">
-        <div className="md:col-span-5">
-          <figure className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-hairline bg-bg-soft shadow-soft-lg">
+    <section id="about" className="section-gradient-soft scroll-mt-24 py-24 md:py-32">
+      <div className="max-w-page mx-auto grid gap-12 px-6 md:grid-cols-12 md:items-center md:px-10">
+        <div className="md:col-span-4">
+          <figure className="relative mx-auto aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-[2rem] border border-hairline bg-bg-soft shadow-soft-lg md:max-w-sm">
             <img
-              src={photos.skinPortrait}
-              alt="Healthy skin portrait representing Grayce aesthetic care"
-              className="h-full w-full object-cover"
+              src={photos.doctorPortrait}
+              alt="Dr. Mary Grace Braga"
+              className="h-full w-full object-cover object-top"
             />
           </figure>
         </div>
 
-        <div className="md:col-span-7">
+        <div className="md:col-span-8">
           <SectionHeading
             eyebrow="About the Doctor"
             title={clinic.doctor.displayName}

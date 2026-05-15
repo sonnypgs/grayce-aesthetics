@@ -7,6 +7,8 @@ import Gallery from "@/components/Gallery";
 import Visit from "@/components/Visit";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ScrollAnimator from "@/components/ScrollAnimator";
+import SmoothScroll from "@/components/SmoothScroll";
 
 export default function Page() {
   return (
@@ -14,14 +16,16 @@ export default function Page() {
       <Nav />
       <main className="relative">
         <Hero />
-        <About />
         <Services />
         <Clinic />
         <Gallery />
+        <About />
         <Visit />
         <Contact />
       </main>
       <Footer />
+      <ScrollAnimator />
+      <SmoothScroll />
     </>
   );
 }

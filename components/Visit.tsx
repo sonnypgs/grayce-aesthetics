@@ -4,9 +4,21 @@ import SectionHeading from "./SectionHeading";
 
 export default function Visit() {
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
+  const osmMapUrl =
+    "https://www.openstreetmap.org/?mlat=14.4676&mlon=121.0207#map=15/14.4676/121.0207";
+  const osmTileZoom = 15;
+  const osmTiles = Array.from({ length: 9 }, (_, index) => {
+    const column = index % 3;
+    const row = Math.floor(index / 3);
+
+    return {
+      x: 27398 + column,
+      y: 15051 + row,
+    };
+  });
 
   return (
-    <section id="visit" className="scroll-mt-24 bg-bg py-24 md:py-32">
+    <section id="visit" className="section-gradient-soft scroll-mt-24 py-24 md:py-32">
       <div className="max-w-page mx-auto px-6 md:px-10">
         <SectionHeading
           eyebrow="Visit"
@@ -74,37 +86,57 @@ export default function Visit() {
           </div>
 
           <div className="md:col-span-7">
-            <div className="relative flex min-h-[520px] overflow-hidden rounded-[2rem] border border-hairline bg-[#4b594c] p-8 text-[#ffeedc] shadow-soft-lg">
+            <div className="relative min-h-[520px] overflow-hidden rounded-[2rem] border border-hairline bg-[#4b594c] text-[#ffeedc] shadow-soft-lg">
               <div
-                aria-hidden
-                className="absolute inset-0 opacity-20"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(90deg, #ffeedc 1px, transparent 1px), linear-gradient(0deg, #ffeedc 1px, transparent 1px)",
-                  backgroundSize: "44px 44px",
-                }}
-              />
-              <div className="relative mt-auto max-w-lg">
-                <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-full border border-[#ffeedc]/30 bg-[#ffeedc] text-[#4b594c] shadow-soft">
-                  <MapPin size={26} strokeWidth={1.8} />
+                aria-label="OpenStreetMap view of Grayce Medical Aesthetic Clinic area"
+                className="absolute inset-0 overflow-hidden"
+                role="img"
+              >
+                <div className="absolute left-1/2 top-1/2 grid h-[768px] w-[768px] -translate-x-[52%] -translate-y-[55%] grid-cols-3 grid-rows-3 opacity-90 grayscale-[12%] sepia-[16%] saturate-[0.78]">
+                  {osmTiles.map((tile) => (
+                    <img
+                      key={`${tile.x}-${tile.y}`}
+                      src={`https://tile.openstreetmap.org/${osmTileZoom}/${tile.x}/${tile.y}.png`}
+                      alt=""
+                      className="h-64 w-64"
+                      loading="lazy"
+                    />
+                  ))}
                 </div>
-                <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#ffeedc]/70">
-                  Map Preview
+              </div>
+              <div className="pointer-events-none absolute inset-0 bg-[#4b594c]/8 mix-blend-multiply" />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,transparent_26%,rgba(255,238,220,0.32)_100%)]" />
+              <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-[#ffeedc]/20" />
+
+              <div className="pointer-events-none absolute left-1/2 top-[48%] z-10 -translate-x-1/2 -translate-y-[84%]">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#4b594c] text-[#ffeedc] shadow-soft-lg ring-8 ring-[#ffeedc]/75">
+                  <MapPin size={22} strokeWidth={2} />
                 </div>
-                <h3 className="font-display mt-4 text-4xl leading-tight md:text-5xl">
-                  GF Asher Bldg., Nuestra Sra. De Lourdes Ave.
-                </h3>
-                <p className="mt-5 max-w-md text-sm leading-relaxed text-[#ffeedc]/78">
-                  Open the live map for the most accurate route to San Antonio
-                  Valley 1, Parañaque City.
-                </p>
+              </div>
+
+              <div className="absolute right-5 top-5 z-10 rounded-full bg-[#ffeedc]/90 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.14em] text-[#4b594c] shadow-soft">
+                © OSM contributors
+              </div>
+
+              <div className="absolute bottom-6 left-6 right-6 z-10 grid gap-4 md:grid-cols-[1fr_auto] md:items-end">
+                <div className="rounded-[1.5rem] border border-[#ffeedc]/20 bg-[#ffeedc]/95 p-5 text-[#243028] shadow-soft-lg backdrop-blur">
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#947f64]">
+                    OpenStreetMap Area View
+                  </div>
+                  <h3 className="font-display mt-2 text-2xl font-semibold leading-tight md:text-3xl">
+                    GF Asher Bldg., Nuestra Sra. De Lourdes Ave.
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-[#65705f]">
+                    San Antonio Valley 1, Parañaque City
+                  </p>
+                </div>
                 <a
-                  href={mapsUrl}
+                  href={osmMapUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-7 inline-flex h-11 items-center rounded-full bg-[#ffeedc] px-5 text-sm font-medium text-[#4b594c]"
+                  className="inline-flex h-11 items-center justify-center rounded-full bg-[#ffeedc] px-5 text-sm font-medium text-[#4b594c] shadow-soft"
                 >
-                  Open Live Map
+                  Open Map
                 </a>
               </div>
             </div>

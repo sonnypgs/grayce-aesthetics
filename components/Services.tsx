@@ -4,7 +4,7 @@ import SectionHeading from "./SectionHeading";
 
 export default function Services() {
   return (
-    <section id="services" className="scroll-mt-24 bg-bg-alt py-24 md:py-32">
+    <section id="services" className="section-gradient-warm scroll-mt-24 py-24 md:py-32">
       <div className="max-w-page mx-auto px-6 md:px-10">
         <div className="grid gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-8">

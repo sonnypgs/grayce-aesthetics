@@ -1,30 +1,27 @@
 import { ArrowRight, MapPin, Phone } from "lucide-react";
 import { bookingHref, clinic, isExternalBooking, photos } from "@/lib/site";
-import BrandLogo from "./BrandLogo";
 
 export default function Hero() {
   const tel = `tel:${clinic.contact.phones[0]}`;
 
   return (
-    <section id="top" className="relative overflow-hidden pt-24 md:pt-36">
-      <div className="absolute inset-x-0 top-0 -z-10 h-[72%] bg-bg-alt" />
+    <section
+      id="top"
+      className="hero-gradient relative overflow-hidden pt-24 pb-16 md:pt-28 md:pb-20"
+    >
       <div className="max-w-page mx-auto px-6 md:px-10">
-        <div className="grid min-h-[calc(100vh-6rem)] gap-10 md:min-h-[calc(100vh-7rem)] md:grid-cols-12 md:items-end">
-          <div className="pb-10 md:col-span-6 md:pb-20">
-            <div className="reveal reveal-1 brand-logo-panel mb-8 flex h-28 w-52 items-center justify-center rounded-[2rem] border border-hairline p-4 shadow-soft sm:h-32 sm:w-60">
-              <BrandLogo className="h-full w-full object-contain" />
-            </div>
-
-            <div className="reveal reveal-2 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-muted">
+        <div className="grid gap-10 md:grid-cols-12 md:items-center">
+          <div className="md:col-span-6">
+            <div className="reveal reveal-1 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-ink-muted">
               <span className="h-px w-10 bg-gold" />
               Physician-led aesthetic care
             </div>
 
-            <h1 className="reveal reveal-3 font-display mt-6 max-w-[10ch] text-[clamp(2.55rem,11vw,4.25rem)] leading-[0.96] text-ink md:max-w-3xl md:text-[clamp(4rem,7vw,6.75rem)]">
+            <h1 className="reveal reveal-2 font-display mt-6 max-w-full text-[clamp(2.5rem,10.5vw,4.25rem)] leading-[0.96] text-ink md:max-w-3xl md:text-[clamp(4rem,7vw,6.75rem)]">
               Refined skin work, grounded in medicine.
             </h1>
 
-            <p className="reveal reveal-4 mt-7 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
+            <p className="reveal reveal-3 mt-7 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
               Grayce is a medical aesthetic clinic in Parañaque led by{" "}
               <span className="font-medium text-ink">
                 {clinic.doctor.displayName}
@@ -33,7 +30,7 @@ export default function Hero() {
               and regenerative treatments.
             </p>
 
-            <div className="reveal reveal-5 mt-9 flex flex-wrap items-center gap-3">
+            <div className="reveal reveal-4 mt-9 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <a
                 href={bookingHref}
                 target={isExternalBooking ? "_blank" : undefined}

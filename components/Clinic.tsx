@@ -27,7 +27,7 @@ const principles = [
 
 export default function Clinic() {
   return (
-    <section id="clinic" className="scroll-mt-24 bg-bg py-24 md:py-32">
+    <section id="clinic" className="section-gradient-soft scroll-mt-24 py-24 md:py-32">
       <div className="max-w-page mx-auto px-6 md:px-10">
         <div className="grid gap-10 md:grid-cols-12 md:items-center">
           <div className="md:col-span-5">

@@ -20,7 +20,7 @@ export default function Contact() {
   const ig = `https://instagram.com/${clinic.contact.instagram.replace("@", "")}`;
 
   return (
-    <section id="contact" className="scroll-mt-24 bg-bg-alt py-24 md:py-32">
+    <section id="contact" className="section-gradient-warm scroll-mt-24 py-24 md:py-32">
       <div className="max-w-page mx-auto px-6 md:px-10">
         <div className="grid overflow-hidden rounded-[2.5rem] border border-hairline bg-[var(--surface)] shadow-soft-xl md:grid-cols-12">
           <div className="bg-[#4b594c] p-8 text-[#ffeedc] md:col-span-5 md:p-12">
