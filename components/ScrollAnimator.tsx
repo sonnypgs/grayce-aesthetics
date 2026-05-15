@@ -10,6 +10,8 @@ export default function ScrollAnimator() {
     sections.forEach((section) => section.classList.add("section-reveal"));
 
     let frame: number | null = null;
+    let initialFrame: number | null = null;
+    let initialTimeout: number | null = null;
 
     const updateVisibility = () => {
       frame = null;
@@ -32,7 +34,12 @@ export default function ScrollAnimator() {
       frame = window.requestAnimationFrame(updateVisibility);
     };
 
-    updateVisibility();
+    initialFrame = window.requestAnimationFrame(() => {
+      initialTimeout = window.setTimeout(() => {
+        frame = window.requestAnimationFrame(updateVisibility);
+      }, 120);
+    });
+
     window.addEventListener("scroll", scheduleUpdate, { passive: true });
     window.addEventListener("resize", scheduleUpdate);
     window.addEventListener("hashchange", scheduleUpdate);
@@ -40,6 +47,12 @@ export default function ScrollAnimator() {
     return () => {
       if (frame !== null) {
         window.cancelAnimationFrame(frame);
+      }
+      if (initialFrame !== null) {
+        window.cancelAnimationFrame(initialFrame);
+      }
+      if (initialTimeout !== null) {
+        window.clearTimeout(initialTimeout);
       }
       window.removeEventListener("scroll", scheduleUpdate);
       window.removeEventListener("resize", scheduleUpdate);
