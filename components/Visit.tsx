@@ -80,7 +80,7 @@ export default function Visit() {
               </div>
               <p className="mt-4 text-sm leading-relaxed text-[#65705f]">
                 Search for Grayce Medical Aesthetic Clinic or GF Asher Bldg. on
-                Nuestra Sra. De Lourdes Ave. for the most direct route.
+                654 Nuestra Sra. De Lourdes Ave. for the most direct route.
               </p>
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function Visit() {
                     OpenStreetMap Area View
                   </div>
                   <h3 className="font-display mt-2 text-2xl font-semibold leading-tight md:text-3xl">
-                    GF Asher Bldg., Nuestra Sra. De Lourdes Ave.
+                    GF Asher Bldg., 654 Nuestra Sra. De Lourdes Ave.
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-[#65705f]">
                     San Antonio Valley 1, Parañaque City

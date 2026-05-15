@@ -232,6 +232,18 @@ body.lightbox-open > header {
   transition: opacity 260ms ease-out;
 }
 
+.cursor-gallery-open {
+  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.cursor-gallery-close {
+  cursor: pointer;
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

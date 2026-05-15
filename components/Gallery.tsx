@@ -83,7 +83,7 @@ export default function Gallery() {
                 <button
                   type="button"
                   aria-label={`Open image ${index + 1}: ${image.alt}`}
-                  className="absolute inset-0 cursor-zoom-in text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-6px] focus-visible:outline-[#ffeedc]"
+                  className="cursor-gallery-open absolute inset-0 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-6px] focus-visible:outline-[#ffeedc]"
                   onClick={() => setActiveIndex(index)}
                 >
                   <img
@@ -114,7 +114,7 @@ export default function Gallery() {
           <button
             type="button"
             aria-label="Close image viewer"
-            className="absolute inset-0 cursor-zoom-out"
+            className="cursor-gallery-close absolute inset-0"
             onClick={() => setActiveIndex(null)}
           />
           <div className="lightbox-panel relative z-10 grid max-h-[92vh] w-full max-w-6xl grid-rows-[minmax(0,1fr)_auto] overflow-hidden rounded-[1.5rem] border border-[#ffeedc]/24 bg-[#ffeedc] shadow-soft-xl">

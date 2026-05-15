@@ -56,11 +56,11 @@ export default function Hero() {
 
           <div className="md:col-span-6">
             <div className="reveal reveal-3 relative grid gap-4 pb-8 md:grid-cols-8 md:pb-14">
-              <figure className="image-grain relative md:col-span-8 aspect-[4/5] overflow-hidden rounded-t-[7rem] rounded-b-[2rem] border border-hairline bg-bg-soft shadow-soft-xl">
+              <figure className="image-grain relative aspect-[4/3] overflow-hidden rounded-t-[5rem] rounded-b-[2rem] border border-hairline bg-bg-soft shadow-soft-xl md:col-span-8 md:aspect-[5/4] md:rounded-t-[7rem]">
                 <img
-                  src={photos.reception}
-                  alt="Grayce Medical Aesthetic Clinic reception"
-                  className="h-full w-full object-cover"
+                  src={photos.clinicLounge}
+                  alt="Grayce Medical Aesthetic Clinic lounge"
+                  className="h-full w-full object-cover object-center"
                 />
               </figure>
               <figure className="surface-panel absolute -left-3 bottom-0 hidden w-44 overflow-hidden rounded-[1.5rem] border border-hairline shadow-soft-lg md:block">

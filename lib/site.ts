@@ -1,5 +1,8 @@
+const freshaBookingUrl =
+  "https://www.fresha.com/a/grayce-medical-aesthetic-clinic-manila-654-nuestra-sra-de-lourdes-wqxulh6r";
+
 export const bookingHref =
-  process.env.NEXT_PUBLIC_FRESHA_BOOKING_URL?.trim() || "#contact";
+  process.env.NEXT_PUBLIC_FRESHA_BOOKING_URL?.trim() || freshaBookingUrl;
 
 export const isExternalBooking = /^https?:\/\//.test(bookingHref);
 
@@ -54,7 +57,7 @@ export const clinic = {
     instagram: "@graycemedicalaesthetics",
     address: {
       line1: "GF Asher Bldg.",
-      line2: "Nuestra Sra. De Lourdes Ave.",
+      line2: "654 Nuestra Sra. De Lourdes Ave.",
       line3: "San Antonio Valley 1, Parañaque City",
       country: "Metro Manila, Philippines",
     },
@@ -73,6 +76,7 @@ export const photos = {
   skinLaser: "/assets/grayce/photos/skin-laser-closeup.jpg",
   rfDevice: "/assets/grayce/photos/procare-rf-device.jpg",
   coolingLaser: "/assets/grayce/photos/cooling-laser-treatment.jpg",
+  clinicLounge: "/assets/grayce/photos/clinic-lounge.jpg",
   reception: "/assets/grayce/photos/clinic-reception-mockup.jpg",
   coolingCloseup: "/assets/grayce/photos/cooling-procedure-closeup.jpg",
   doctorPortrait: "/assets/grayce/photos/dr-mary-grace-braga.jpg",
@@ -128,7 +132,7 @@ export const serviceGroups = [
 ];
 
 export const gallery = [
-  { src: photos.reception, alt: "Grayce Medical Aesthetic Clinic reception mockup" },
+  { src: photos.clinicLounge, alt: "Grayce Medical Aesthetic Clinic lounge" },
   { src: photos.serumDrop, alt: "Serum drop for aesthetic facial treatment" },
   { src: photos.rfTreatment, alt: "Radiofrequency treatment close-up" },
   { src: photos.deviceDisplay, alt: "Aesthetic treatment device screen" },
@@ -149,5 +153,5 @@ export const gallery = [
 ];
 
 export const mapQuery = encodeURIComponent(
-  "GF Asher Bldg Nuestra Sra. De Lourdes Ave San Antonio Valley 1 Paranaque City"
+  "GF Asher Bldg 654 Nuestra Sra. De Lourdes Ave San Antonio Valley 1 Paranaque City"
 );
