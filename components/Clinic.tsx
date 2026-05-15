@@ -1,27 +1,24 @@
-import { Leaf, ShieldCheck, Sparkles, Timer } from "lucide-react";
+import { Eye, HandHeart, Sparkles } from "lucide-react";
 import { photos } from "@/lib/site";
 import SectionHeading from "./SectionHeading";
 
-const principles = [
+const clinicStatements = [
   {
-    icon: ShieldCheck,
-    title: "Physician-led plans",
-    text: "Every treatment path starts with a medical consultation and suitability check.",
+    icon: Eye,
+    title: "VISION",
+    text:
+      "To become the community’s most trusted partner in medical aesthetics and comprehensive body wellness.",
   },
   {
-    icon: Timer,
-    title: "Unhurried appointments",
-    text: "The clinic is built around clear explanations, realistic expectations, and careful pacing.",
-  },
-  {
-    icon: Leaf,
-    title: "Skin quality first",
-    text: "The goal is refreshed, healthier-looking skin rather than an overcorrected result.",
+    icon: HandHeart,
+    title: "MISSION",
+    text:
+      "To collaborate with patients and clients regarding their goals through the use of evidence-based and research-backed medical practice and services prioritizing safety, facial and body harmony, in conjunction with personalized care.",
   },
   {
     icon: Sparkles,
-    title: "Treatment range",
-    text: "Facials, lasers, injectables, contouring, regenerative skin, and hair-health care.",
+    title: "CORE VALUES",
+    text: "Honesty, Empathy, Collaboration, Innovation and Service Quality",
   },
 ];
 
@@ -32,9 +29,9 @@ export default function Clinic() {
         <div className="grid gap-10 md:grid-cols-12 md:items-center">
           <div className="md:col-span-5">
             <SectionHeading
-              eyebrow="The Clinic"
+              eyebrow="About Grayce"
               title="A calm room for precise work."
-              intro="Grayce brings medical aesthetics into a softer, more considered setting: a clinic that feels composed, private, and easy to return to."
+              intro="Grayce Medical Aesthetic Clinic opened its doors on May 2nd 2026 grounded in the belief that intentionally taking care and improving ourselves always lead to our most natural beauty and revitalizing longevity. This clinic was developed by partners in love and in life, aesthetic medicine Dr. Mary Grace Tsai-Braga and entrepreneur Mr. Mark Lester Braga equipped with the goal of restoring and refining already existing features rather than outright redefinition. Through evidence-based medical practice, and with the use of clinical-grade products and machines, Grayce Medical Aesthetic Clinic aims to be your trusted partner in everything: HEALTH, AESTHETICS, AND BODY WELLNESS. Largely community-based, we aspire to make aesthetic services accessible to everyone."
             />
           </div>
           <div className="md:col-span-7">
@@ -48,8 +45,8 @@ export default function Clinic() {
           </div>
         </div>
 
-        <div className="mt-14 grid gap-4 md:grid-cols-4">
-          {principles.map(({ icon: Icon, title, text }) => (
+        <div className="mt-14 grid gap-4 md:grid-cols-3">
+          {clinicStatements.map(({ icon: Icon, title, text }) => (
             <article
               key={title}
               className="surface-panel rounded-[1.5rem] border border-hairline p-6 shadow-soft"
@@ -57,10 +54,10 @@ export default function Clinic() {
               <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#4b594c] text-[#ffeedc]">
                 <Icon size={18} strokeWidth={1.8} />
               </span>
-              <h3 className="mt-6 font-display text-xl font-semibold leading-tight text-[#243028]">
+              <h3 className="mt-6 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#947f64]">
                 {title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-[#65705f]">
+              <p className="mt-3 text-sm leading-relaxed text-[#243028]">
                 {text}
               </p>
             </article>

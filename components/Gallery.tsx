@@ -83,7 +83,7 @@ export default function Gallery() {
                 <button
                   type="button"
                   aria-label={`Open image ${index + 1}: ${image.alt}`}
-                  className="cursor-gallery-open absolute inset-0 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-6px] focus-visible:outline-[#ffeedc]"
+                  className="gallery-trigger absolute inset-0 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-6px] focus-visible:outline-[#ffeedc]"
                   onClick={() => setActiveIndex(index)}
                 >
                   <img

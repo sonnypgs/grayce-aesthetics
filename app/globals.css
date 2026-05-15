@@ -232,10 +232,9 @@ body.lightbox-open > header {
   transition: opacity 260ms ease-out;
 }
 
-.cursor-gallery-open {
+.gallery-trigger,
+.gallery-trigger * {
   cursor: pointer;
-  cursor: -webkit-zoom-in;
-  cursor: zoom-in;
 }
 
 .cursor-gallery-close {
