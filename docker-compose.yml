@@ -1,0 +1,50 @@
+services:
+  app:
+    build:
+      context: .
+      target: devbox
+    image: grayce-aesthetics-devbox:latest
+    container_name: grayce-aesthetics
+    init: true
+    restart: unless-stopped
+    working_dir: /app
+    env_file:
+      - path: .env.devbox
+        required: false
+    environment:
+      NODE_ENV: development
+      NEXT_TELEMETRY_DISABLED: "1"
+      PORT: "3000"
+      HOSTNAME: 0.0.0.0
+      WATCHPACK_POLLING: "true"
+    volumes:
+      - .:/app
+      - grayce-aesthetics-node-modules:/app/node_modules
+      - grayce-aesthetics-next-cache:/app/.next
+    command: >
+      sh -c "test -x node_modules/.bin/next || pnpm install --frozen-lockfile;
+      pnpm exec next dev -H 0.0.0.0 -p 3000"
+    expose:
+      - "3000"
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=traefik-network
+      - traefik.http.routers.grayce-aesthetics.rule=Host(`grayce-aesthetics.sonnydev.com`)
+      - traefik.http.routers.grayce-aesthetics.entrypoints=web,websecure
+      - traefik.http.routers.grayce-aesthetics.tls.certresolver=letsencrypt
+      - traefik.http.services.grayce-aesthetics.loadbalancer.server.port=3000
+      - traefik.http.middlewares.grayce-aesthetics-redirect.redirectscheme.scheme=https
+      - traefik.http.middlewares.grayce-aesthetics-redirect.redirectscheme.permanent=true
+      - traefik.http.routers.grayce-aesthetics-http.rule=Host(`grayce-aesthetics.sonnydev.com`)
+      - traefik.http.routers.grayce-aesthetics-http.entrypoints=web
+      - traefik.http.routers.grayce-aesthetics-http.middlewares=grayce-aesthetics-redirect
+    networks:
+      - traefik-network
+
+volumes:
+  grayce-aesthetics-node-modules:
+  grayce-aesthetics-next-cache:
+
+networks:
+  traefik-network:
+    external: true
