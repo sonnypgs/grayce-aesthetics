@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter, Pinyon_Script } from "next/font/google";
+import { isMaintenanceMode } from "@/lib/maintenance";
 import { brand, clinic } from "@/lib/site";
 import "./globals.css";
 
@@ -27,9 +28,19 @@ const pinyon = Pinyon_Script({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://grayce-aesthetics.com"),
-  title: "Grayce Medical Aesthetic Clinic | Parañaque",
+  title: isMaintenanceMode
+    ? "Grayce Medical Aesthetic Clinic | Maintenance"
+    : "Grayce Medical Aesthetic Clinic | Parañaque",
   description:
-    "Physician-led medical aesthetic clinic in Parañaque City, led by Dr. Mary Grace Braga.",
+    isMaintenanceMode
+      ? "Grayce Medical Aesthetic Clinic is currently refreshing its website."
+      : "Physician-led medical aesthetic clinic in Parañaque City, led by Dr. Mary Grace Braga.",
+  robots: isMaintenanceMode
+    ? {
+        index: false,
+        follow: false,
+      }
+    : undefined,
   icons: {
     icon: "/assets/grayce/brand/monogram-transparent.png",
     apple: "/assets/grayce/brand/social-profile.png",

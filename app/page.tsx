@@ -7,10 +7,16 @@ import Gallery from "@/components/Gallery";
 import Visit from "@/components/Visit";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import MaintenancePage from "@/components/MaintenancePage";
 import ScrollAnimator from "@/components/ScrollAnimator";
 import SmoothScroll from "@/components/SmoothScroll";
+import { isMaintenanceMode } from "@/lib/maintenance";
 
 export default function Page() {
+  if (isMaintenanceMode) {
+    return <MaintenancePage />;
+  }
+
   return (
     <>
       <Nav />
