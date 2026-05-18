@@ -20,7 +20,8 @@ services:
     volumes:
       - .:/app
       - grayce-aesthetics-node-modules:/app/node_modules
-      - grayce-aesthetics-next-cache:/app/.next
+    tmpfs:
+      - /app/.next
     command: >
       sh -c "test -x node_modules/.bin/next || pnpm install --frozen-lockfile;
       pnpm exec next dev -H 0.0.0.0 -p 3000"
@@ -43,7 +44,6 @@ services:
 
 volumes:
   grayce-aesthetics-node-modules:
-  grayce-aesthetics-next-cache:
 
 networks:
   traefik-network:
