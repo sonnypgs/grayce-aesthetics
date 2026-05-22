@@ -12,19 +12,19 @@ services:
       - path: .env.devbox
         required: false
     environment:
-      NODE_ENV: development
+      NODE_ENV: production
       NEXT_TELEMETRY_DISABLED: "1"
       PORT: "3000"
       HOSTNAME: 0.0.0.0
-      WATCHPACK_POLLING: "true"
     volumes:
       - .:/app
       - grayce-aesthetics-node-modules:/app/node_modules
-      - grayce-aesthetics-next-cache:/app/.next
     command: >
-      sh -c "rm -rf .next/*;
-      test -x node_modules/.bin/next || pnpm install --frozen-lockfile;
-      pnpm exec next dev -H 0.0.0.0 -p 3000"
+      sh -c "set -e;
+      rm -rf .next out;
+      ([ -x node_modules/.bin/next ] && [ -x node_modules/.bin/serve ]) || CI=true pnpm install --frozen-lockfile --prod=false --store-dir /pnpm/store;
+      pnpm build;
+      pnpm start"
     expose:
       - "3000"
     labels:
@@ -39,12 +39,23 @@ services:
       - traefik.http.routers.grayce-aesthetics-http.rule=Host(`grayce-aesthetics.sonnydev.com`)
       - traefik.http.routers.grayce-aesthetics-http.entrypoints=web
       - traefik.http.routers.grayce-aesthetics-http.middlewares=grayce-aesthetics-redirect
+      - traefik.http.middlewares.grayce-aesthetics-www-redirect.redirectregex.regex=^https?://www\.grayce-aesthetics\.sonnydev\.com/(.*)
+      - traefik.http.middlewares.grayce-aesthetics-www-redirect.redirectregex.replacement=https://grayce-aesthetics.sonnydev.com/$${1}
+      - traefik.http.middlewares.grayce-aesthetics-www-redirect.redirectregex.permanent=true
+      - traefik.http.routers.grayce-aesthetics-www.rule=Host(`www.grayce-aesthetics.sonnydev.com`)
+      - traefik.http.routers.grayce-aesthetics-www.entrypoints=websecure
+      - traefik.http.routers.grayce-aesthetics-www.tls.certresolver=letsencrypt
+      - traefik.http.routers.grayce-aesthetics-www.middlewares=grayce-aesthetics-www-redirect
+      - traefik.http.routers.grayce-aesthetics-www.service=grayce-aesthetics
+      - traefik.http.routers.grayce-aesthetics-www-http.rule=Host(`www.grayce-aesthetics.sonnydev.com`)
+      - traefik.http.routers.grayce-aesthetics-www-http.entrypoints=web
+      - traefik.http.routers.grayce-aesthetics-www-http.middlewares=grayce-aesthetics-www-redirect
+      - traefik.http.routers.grayce-aesthetics-www-http.service=grayce-aesthetics
     networks:
       - traefik-network
 
 volumes:
   grayce-aesthetics-node-modules:
-  grayce-aesthetics-next-cache:
 
 networks:
   traefik-network:
