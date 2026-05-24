@@ -89,7 +89,10 @@ export default function Gallery() {
                   <img
                     src={image.src}
                     alt={image.alt}
-                    className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.035]"
+                    className="mobile-parallax-media h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.035]"
+                    data-mobile-parallax={
+                      index % 3 === 0 ? "24" : index % 3 === 1 ? "-18" : "14"
+                    }
                     loading={index < 6 ? "eager" : "lazy"}
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#243028]/36 via-transparent to-[#ffeedc]/8 opacity-72 transition-opacity duration-500 group-hover:opacity-80" />

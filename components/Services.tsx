@@ -37,7 +37,8 @@ export default function Services() {
                 <img
                   src={service.image}
                   alt=""
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+                  className="mobile-parallax-media h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+                  data-mobile-parallax={index % 2 === 0 ? "28" : "-22"}
                 />
               </div>
               <div className="p-6">

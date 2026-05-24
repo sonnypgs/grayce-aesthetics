@@ -8,6 +8,7 @@ import Visit from "@/components/Visit";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import MaintenancePage from "@/components/MaintenancePage";
+import MobileParallax from "@/components/MobileParallax";
 import ScrollAnimator from "@/components/ScrollAnimator";
 import SmoothScroll from "@/components/SmoothScroll";
 import { isMaintenanceMode } from "@/lib/maintenance";
@@ -31,6 +32,7 @@ export default function Page() {
       </main>
       <Footer />
       <ScrollAnimator />
+      <MobileParallax />
       <SmoothScroll />
     </>
   );

@@ -241,6 +241,35 @@ body.motion-ready #services.section-visible article:nth-of-type(5) { transition-
 body.motion-ready #services.section-visible article:nth-of-type(6) { transition-delay: 760ms; }
 body.motion-ready #services.section-visible article:nth-of-type(n+7) { transition-delay: 860ms; }
 
+@media (max-width: 767px) {
+  .mobile-parallax-media {
+    height: calc(100% + 4.5rem);
+    margin-top: -2.25rem;
+    transform: translate3d(0, var(--mobile-parallax-y, 0px), 0) scale(1.02);
+    transform-origin: center;
+    will-change: transform;
+  }
+
+  .mobile-parallax-layer {
+    transform: translate3d(0, var(--mobile-parallax-y, 0px), 0);
+    will-change: transform;
+  }
+}
+
+@media (max-width: 767px) and (prefers-reduced-motion: reduce) {
+  .mobile-parallax-media {
+    height: 100%;
+    margin-top: 0;
+    transform: none;
+    will-change: auto;
+  }
+
+  .mobile-parallax-layer {
+    transform: none;
+    will-change: auto;
+  }
+}
+
 @keyframes lightbox-fade {
   from {
     opacity: 0;

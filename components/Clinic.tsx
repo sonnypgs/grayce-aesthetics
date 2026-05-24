@@ -39,7 +39,8 @@ export default function Clinic() {
               <img
                 src={photos.complexions}
                 alt="Skin care models representing Grayce clients"
-                className="h-full w-full object-cover"
+                className="mobile-parallax-media h-full w-full object-cover"
+                data-mobile-parallax="32"
               />
             </figure>
           </div>
@@ -69,7 +70,8 @@ export default function Clinic() {
             <img
               src={photos.neck}
               alt="Neck and decolletage skin care"
-              className="h-full w-full object-cover"
+              className="mobile-parallax-media h-full w-full object-cover"
+              data-mobile-parallax="-24"
             />
           </figure>
           <blockquote className="md:col-span-7 border-t border-hairline pt-8 font-display text-3xl leading-tight text-ink md:text-4xl">

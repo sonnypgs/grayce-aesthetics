@@ -60,7 +60,8 @@ export default function Hero() {
                 <img
                   src={photos.clinicLounge}
                   alt="Grayce Medical Aesthetic Clinic lounge"
-                  className="h-full w-full object-cover object-center"
+                  className="mobile-parallax-media h-full w-full object-cover object-center"
+                  data-mobile-parallax="36"
                 />
               </figure>
               <figure className="surface-panel absolute -left-3 bottom-0 hidden w-44 overflow-hidden rounded-[1.5rem] border border-hairline shadow-soft-lg md:block">
@@ -71,7 +72,10 @@ export default function Hero() {
                 />
               </figure>
               <div className="surface-panel absolute bottom-4 right-2 max-w-[min(260px,calc(100%-1rem))] rounded-[1.5rem] border border-hairline p-4 shadow-soft-lg sm:p-5 md:-right-2">
-                <div className="flex items-start gap-3">
+                <div
+                  className="mobile-parallax-layer flex items-start gap-3"
+                  data-mobile-parallax="-18"
+                >
                   <MapPin className="mt-0.5 text-[#947f64]" size={17} />
                   <div>
                     <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#947f64]">

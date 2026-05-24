@@ -13,7 +13,8 @@ export default function About() {
             <img
               src={photos.doctorPortrait}
               alt="Dr. Mary Grace Braga"
-              className="h-full w-full object-cover object-top"
+              className="mobile-parallax-media h-full w-full object-cover object-top"
+              data-mobile-parallax="30"
             />
           </figure>
         </div>
