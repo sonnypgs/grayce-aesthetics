@@ -18,7 +18,7 @@ export default function Hero() {
             </div>
 
             <h1 className="reveal reveal-2 font-display mt-6 max-w-full text-[clamp(2.5rem,10.5vw,4.25rem)] leading-[0.96] text-ink md:max-w-3xl md:text-[clamp(4rem,7vw,6.75rem)]">
-              Refined skin work, grounded in medicine.
+              Fresh, beautiful skin starts here.
             </h1>
 
             <p className="reveal reveal-3 mt-7 max-w-xl text-base leading-relaxed text-ink-muted sm:text-lg">
@@ -58,17 +58,10 @@ export default function Hero() {
             <div className="reveal reveal-3 relative grid gap-4 pb-8 md:grid-cols-8 md:pb-14">
               <figure className="image-grain relative aspect-[4/3] overflow-hidden rounded-t-[5rem] rounded-b-[2rem] border border-hairline bg-bg-soft shadow-soft-xl md:col-span-8 md:aspect-[5/4] md:rounded-t-[7rem]">
                 <img
-                  src={photos.clinicLounge}
-                  alt="Grayce Medical Aesthetic Clinic lounge"
+                  src={photos.brightSkin}
+                  alt="Healthy glowing skin portrait"
                   className="mobile-parallax-media h-full w-full object-cover object-center"
                   data-mobile-parallax="36"
-                />
-              </figure>
-              <figure className="surface-panel absolute -left-3 bottom-0 hidden w-44 overflow-hidden rounded-[1.5rem] border border-hairline shadow-soft-lg md:block">
-                <img
-                  src={photos.serumDrop}
-                  alt="Serum detail"
-                  className="h-44 w-full object-cover"
                 />
               </figure>
               <div className="surface-panel absolute bottom-4 right-2 max-w-[min(260px,calc(100%-1rem))] rounded-[1.5rem] border border-hairline p-4 shadow-soft-lg sm:p-5 md:-right-2">
