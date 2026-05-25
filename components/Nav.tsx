@@ -8,7 +8,8 @@ import BrandLogo from "./BrandLogo";
 const links = [
   { href: "#services", label: "Services" },
   { href: "#clinic", label: "Clinic" },
-  { href: "#gallery", label: "Gallery" },
+  { href: "#instagram", label: "Instagram" },
+  { href: "#reviews", label: "Reviews" },
   { href: "#about", label: "Doctor" },
   { href: "#visit", label: "Visit" },
   { href: "#contact", label: "Contact" },

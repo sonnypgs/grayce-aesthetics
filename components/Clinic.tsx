@@ -7,18 +7,19 @@ const clinicStatements = [
     icon: Eye,
     title: "VISION",
     text:
-      "To become the community’s most trusted partner in medical aesthetics and comprehensive body wellness.",
+      "To become the community’s most trusted partner in medical aesthetics and comprehensive body wellness, offering care that feels accessible, honest, and deeply connected to the people we serve.",
   },
   {
     icon: HandHeart,
     title: "MISSION",
     text:
-      "To collaborate with patients and clients regarding their goals through the use of evidence-based and research-backed medical practice and services prioritizing safety, facial and body harmony, in conjunction with personalized care.",
+      "To collaborate with patients and clients regarding their goals through evidence-based and research-backed medical practice, prioritizing safety, facial and body harmony, and personalized care.",
   },
   {
     icon: Sparkles,
     title: "CORE VALUES",
-    text: "Honesty, Empathy, Collaboration, Innovation and Service Quality",
+    text:
+      "To practice with honesty, empathy, collaboration, innovation, and service quality, creating an experience where every treatment decision is clear, respectful, and intentionally guided.",
   },
 ];
 
@@ -32,6 +33,7 @@ export default function Clinic() {
               eyebrow="About Grayce"
               title="A calm room for precise work."
               intro="Grayce Medical Aesthetic Clinic opened its doors on May 2nd 2026 grounded in the belief that intentionally taking care and improving ourselves always lead to our most natural beauty and revitalizing longevity. This clinic was developed by partners in love and in life, aesthetic medicine Dr. Mary Grace Tsai-Braga and entrepreneur Mr. Mark Lester Braga equipped with the goal of restoring and refining already existing features rather than outright redefinition. Through evidence-based medical practice, and with the use of clinical-grade products and machines, Grayce Medical Aesthetic Clinic aims to be your trusted partner in everything: HEALTH, AESTHETICS, AND BODY WELLNESS. Largely community-based, we aspire to make aesthetic services accessible to everyone."
+              introClassName="text-justify"
             />
           </div>
           <div className="md:col-span-7">
@@ -46,19 +48,21 @@ export default function Clinic() {
           </div>
         </div>
 
-        <div className="mt-14 grid gap-4 md:grid-cols-3">
+        <div className="mt-14 grid auto-rows-fr items-stretch gap-4 md:grid-cols-3">
           {clinicStatements.map(({ icon: Icon, title, text }) => (
             <article
               key={title}
-              className="surface-panel rounded-[1.5rem] border border-hairline p-6 shadow-soft"
+              className="surface-panel h-full rounded-[1.5rem] border border-hairline p-6 shadow-soft"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#4b594c] text-[#ffeedc]">
-                <Icon size={18} strokeWidth={1.8} />
-              </span>
-              <h3 className="mt-6 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#947f64]">
-                {title}
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-[#243028]">
+              <div className="flex items-center gap-4">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#4b594c] text-[#ffeedc]">
+                  <Icon size={18} strokeWidth={1.8} />
+                </span>
+                <h3 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#947f64]">
+                  {title}
+                </h3>
+              </div>
+              <p className="mt-3 text-[15px] leading-relaxed text-[#243028] md:text-base">
                 {text}
               </p>
             </article>

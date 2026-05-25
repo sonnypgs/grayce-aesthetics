@@ -6,7 +6,8 @@ const links = [
   { href: "#about", label: "Doctor" },
   { href: "#services", label: "Treatments" },
   { href: "#clinic", label: "Clinic" },
-  { href: "#gallery", label: "Gallery" },
+  { href: "#instagram", label: "Instagram" },
+  { href: "#reviews", label: "Reviews" },
   { href: "#visit", label: "Visit" },
   { href: "#contact", label: "Contact" },
 ];

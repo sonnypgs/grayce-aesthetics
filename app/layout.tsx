@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter, Pinyon_Script } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { isMaintenanceMode } from "@/lib/maintenance";
 import { brand, clinic } from "@/lib/site";
 import "./globals.css";
@@ -59,6 +60,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID?.trim();
+
   return (
     <html
       lang="en"
@@ -66,6 +69,7 @@ export default function RootLayout({
     >
       <body>
         {children}
+        {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
       </body>
     </html>
   );

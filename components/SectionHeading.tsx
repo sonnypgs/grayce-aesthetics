@@ -5,6 +5,7 @@ type Props = {
   title: string;
   intro?: string;
   align?: "left" | "center";
+  introClassName?: string;
 };
 
 export default function SectionHeading({
@@ -12,6 +13,7 @@ export default function SectionHeading({
   title,
   intro,
   align = "left",
+  introClassName = "",
 }: Props) {
   const alignCls = align === "center" ? "text-center mx-auto" : "";
   return (
@@ -28,7 +30,7 @@ export default function SectionHeading({
         {title}
       </h2>
       {intro && (
-        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-ink-muted">
+        <p className={`mt-5 max-w-2xl text-lg leading-relaxed text-ink-muted ${introClassName}`}>
           {intro}
         </p>
       )}

@@ -131,25 +131,109 @@ export const serviceGroups = [
   },
 ];
 
-export const gallery = [
-  { src: photos.clinicLounge, alt: "Grayce Medical Aesthetic Clinic lounge" },
-  { src: photos.serumDrop, alt: "Serum drop for aesthetic facial treatment" },
-  { src: photos.rfTreatment, alt: "Radiofrequency treatment close-up" },
-  { src: photos.deviceDisplay, alt: "Aesthetic treatment device screen" },
-  { src: photos.skinLaser, alt: "Laser treatment close-up" },
-  { src: photos.rfDevice, alt: "Radiofrequency treatment device" },
-  { src: photos.coolingLaser, alt: "Cooling laser treatment in progress" },
-  { src: photos.coolingCloseup, alt: "Skin procedure close-up" },
-  { src: photos.facialHandpiece, alt: "Facial handpiece treatment" },
-  { src: photos.hydrafacialHandpiece, alt: "Hydrafacial handpiece treatment" },
-  { src: photos.hydrafacialDevice, alt: "Hydrafacial treatment device" },
-  { src: photos.legs, alt: "Laser hair reduction beauty image" },
-  { src: photos.skinPortrait, alt: "Healthy glowing skin portrait" },
-  { src: photos.diversePortrait, alt: "Diverse skin care portrait" },
-  { src: photos.lips, alt: "Lip and lower-face detail" },
-  { src: photos.complexions, alt: "Group portrait showing different complexions" },
-  { src: photos.brightSkin, alt: "Bright skin care model" },
-  { src: photos.neck, alt: "Neck and decolletage skin care image" },
+export type SocialPost = {
+  id: string;
+  mediaType: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
+  image: string;
+  caption: string;
+  timestamp: string;
+  permalink: string;
+};
+
+export const instagramPosts: SocialPost[] = [
+  {
+    id: "ig_mock_001",
+    mediaType: "CAROUSEL_ALBUM",
+    image: photos.clinicLounge,
+    caption:
+      "A quiet look inside the clinic: measured consultations, thoughtful treatment planning, and skin care that starts with listening.",
+    timestamp: "2026-05-18",
+    permalink: "https://instagram.com/graycemedicalaesthetics",
+  },
+  {
+    id: "ig_mock_002",
+    mediaType: "IMAGE",
+    image: photos.hydrafacialHandpiece,
+    caption:
+      "Hydration-focused facial care for a fresh, healthy-looking glow. Protocols are selected after skin assessment.",
+    timestamp: "2026-05-12",
+    permalink: "https://instagram.com/graycemedicalaesthetics",
+  },
+  {
+    id: "ig_mock_003",
+    mediaType: "VIDEO",
+    image: photos.coolingLaser,
+    caption:
+      "Laser sessions are planned around comfort, suitability, and gradual progress, never one-size-fits-all.",
+    timestamp: "2026-05-06",
+    permalink: "https://instagram.com/graycemedicalaesthetics",
+  },
+  {
+    id: "ig_mock_004",
+    mediaType: "IMAGE",
+    image: photos.rfTreatment,
+    caption:
+      "Radiofrequency treatment moments from the room: warm, focused, and guided by a careful clinical eye.",
+    timestamp: "2026-04-29",
+    permalink: "https://instagram.com/graycemedicalaesthetics",
+  },
+  {
+    id: "ig_mock_005",
+    mediaType: "CAROUSEL_ALBUM",
+    image: photos.skinPortrait,
+    caption:
+      "Skin health is cumulative. The best plans balance in-clinic treatment with habits that can be sustained.",
+    timestamp: "2026-04-21",
+    permalink: "https://instagram.com/graycemedicalaesthetics",
+  },
+  {
+    id: "ig_mock_006",
+    mediaType: "IMAGE",
+    image: photos.doctorPortrait,
+    caption:
+      "Physician-led aesthetic care with Dr. Mary Grace Braga, centered on safety, clarity, and natural-looking refinement.",
+    timestamp: "2026-04-14",
+    permalink: "https://instagram.com/graycemedicalaesthetics",
+  },
+];
+
+export type Testimonial = {
+  id: string;
+  reviewer: string;
+  rating: number;
+  date: string;
+  text: string;
+  sourceUrl: string;
+};
+
+export const testimonials: Testimonial[] = [
+  {
+    id: "review_mock_001",
+    reviewer: "Alyssa M.",
+    rating: 5,
+    date: "2026-05-03",
+    text:
+      "The consultation felt very thorough and calm. Dr. Braga explained the options clearly and recommended a plan that made sense for my skin.",
+    sourceUrl: "https://www.google.com/search?q=Grayce+Medical+Aesthetic+Clinic+reviews",
+  },
+  {
+    id: "review_mock_002",
+    reviewer: "Camille R.",
+    rating: 5,
+    date: "2026-04-17",
+    text:
+      "Beautiful clinic and very kind staff. I appreciated that the treatment was not rushed and every step was explained before starting.",
+    sourceUrl: "https://www.google.com/search?q=Grayce+Medical+Aesthetic+Clinic+reviews",
+  },
+  {
+    id: "review_mock_003",
+    reviewer: "Nina P.",
+    rating: 5,
+    date: "2026-03-28",
+    text:
+      "My skin felt refreshed after the session, and the aftercare guidance was practical. It felt professional from booking to follow-up.",
+    sourceUrl: "https://www.google.com/search?q=Grayce+Medical+Aesthetic+Clinic+reviews",
+  },
 ];
 
 export const mapQuery = encodeURIComponent(

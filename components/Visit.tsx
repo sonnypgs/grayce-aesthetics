@@ -2,8 +2,66 @@ import { Car, Clock, MapPin } from "lucide-react";
 import { clinic, mapQuery } from "@/lib/site";
 import SectionHeading from "./SectionHeading";
 
+function GoogleMapsIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 21s6-5.35 6-11a6 6 0 0 0-12 0c0 5.65 6 11 6 11Z"
+        stroke="currentColor"
+        strokeLinejoin="round"
+        strokeWidth="1.8"
+      />
+      <path
+        d="M9.25 10.1a2.75 2.75 0 1 0 5.5 0 2.75 2.75 0 0 0-5.5 0Z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <path
+        d="M12 3.75v3.5M7.7 10.2h3.05M13.25 10.2h3.05"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="1.45"
+      />
+    </svg>
+  );
+}
+
+function WazeIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      className={className}
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M4.5 12.2c0-4.25 3.35-7.45 7.85-7.45 4.1 0 7.15 2.8 7.15 6.65 0 3.75-2.95 6.55-7.1 6.55H9.45L5.6 20.2l.9-3.95c-1.25-.95-2-2.35-2-4.05Z"
+        stroke="currentColor"
+        strokeLinejoin="round"
+        strokeWidth="1.75"
+      />
+      <path
+        d="M9.1 10.6h.01M14.9 10.6h.01M9.8 14.05c1.25.95 3.15.95 4.4 0"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="1.9"
+      />
+      <path
+        d="M8.6 18.05a1.45 1.45 0 1 0 0 2.9 1.45 1.45 0 0 0 0-2.9ZM16.4 18.05a1.45 1.45 0 1 0 0 2.9 1.45 1.45 0 0 0 0-2.9Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
 export default function Visit() {
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${mapQuery}`;
+  const wazeUrl = "https://www.waze.com/ul?ll=14.4676%2C121.0207&navigate=yes";
   const osmMapUrl =
     "https://www.openstreetmap.org/?mlat=14.4676&mlon=121.0207#map=15/14.4676/121.0207";
   const osmTileZoom = 15;
@@ -43,14 +101,26 @@ export default function Visit() {
               <p className="mt-2 text-sm text-[#65705f]">
                 {clinic.contact.address.country}
               </p>
-              <a
-                href={mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-flex h-11 items-center rounded-full bg-[#4b594c] px-5 text-sm font-medium text-[#ffeedc]"
-              >
-                Open in Maps
-              </a>
+              <div className="mt-5 flex flex-col gap-2 sm:flex-row">
+                <a
+                  href={mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-11 items-center justify-center gap-2 rounded-full bg-[#4b594c] px-5 text-sm font-medium text-[#ffeedc] transition hover:bg-[#354238]"
+                >
+                  <GoogleMapsIcon className="h-4 w-4" />
+                  Google Maps
+                </a>
+                <a
+                  href={wazeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-11 items-center justify-center gap-2 rounded-full border border-hairline bg-[var(--surface)] px-5 text-sm font-medium text-[#243028] transition hover:border-[#947f64]"
+                >
+                  <WazeIcon className="h-4 w-4" />
+                  Waze
+                </a>
+              </div>
             </div>
 
             <div className="surface-panel rounded-[1.5rem] border border-hairline p-6 shadow-soft">

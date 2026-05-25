@@ -1,5 +1,6 @@
 import { ArrowRight, MapPin, Phone } from "lucide-react";
 import { bookingHref, clinic, isExternalBooking, photos } from "@/lib/site";
+import TrackedLink from "./TrackedLink";
 
 export default function Hero() {
   const tel = `tel:${clinic.contact.phones[0]}`;
@@ -31,10 +32,12 @@ export default function Hero() {
             </p>
 
             <div className="reveal reveal-4 mt-9 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-              <a
+              <TrackedLink
                 href={bookingHref}
                 target={isExternalBooking ? "_blank" : undefined}
                 rel={isExternalBooking ? "noopener noreferrer" : undefined}
+                eventName="book_appointment_click"
+                eventData={{ location: "hero" }}
                 className="group inline-flex h-12 items-center gap-2 rounded-full bg-sage px-5 font-medium text-[var(--bg)] transition-colors hover:bg-sage-deep sm:px-6"
               >
                 Book Appointment
@@ -43,14 +46,16 @@ export default function Hero() {
                   strokeWidth={2}
                   className="transition-transform group-hover:translate-x-0.5"
                 />
-              </a>
-              <a
+              </TrackedLink>
+              <TrackedLink
                 href={tel}
+                eventName="phone_click"
+                eventData={{ location: "hero", phone: clinic.contact.phones[0] }}
                 className="inline-flex h-12 items-center gap-2 rounded-full border border-hairline bg-[var(--surface)] px-5 font-medium text-[#243028] transition-colors hover:border-gold sm:px-6"
               >
                 <Phone size={16} strokeWidth={2} />
                 Call Clinic
-              </a>
+              </TrackedLink>
             </div>
           </div>
 

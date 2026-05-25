@@ -22,7 +22,7 @@ services:
     command: >
       sh -c "set -e;
       rm -rf .next out;
-      ([ -x node_modules/.bin/next ] && [ -x node_modules/.bin/serve ]) || CI=true pnpm install --frozen-lockfile --prod=false --store-dir /pnpm/store;
+      CI=true pnpm install --frozen-lockfile --prod=false --store-dir /pnpm/store;
       pnpm build;
       pnpm start"
     expose:

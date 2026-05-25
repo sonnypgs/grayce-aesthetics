@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { bookingHref, isExternalBooking, serviceGroups } from "@/lib/site";
 import SectionHeading from "./SectionHeading";
+import TrackedLink from "./TrackedLink";
 
 export default function Services() {
   return (
@@ -15,15 +16,17 @@ export default function Services() {
             />
           </div>
           <div className="md:col-span-4 md:text-right">
-            <a
+            <TrackedLink
               href={bookingHref}
               target={isExternalBooking ? "_blank" : undefined}
               rel={isExternalBooking ? "noopener noreferrer" : undefined}
+              eventName="book_appointment_click"
+              eventData={{ location: "services" }}
               className="inline-flex h-12 items-center gap-2 rounded-full border border-hairline bg-[var(--surface)] px-6 font-medium text-[#243028] transition-colors hover:border-gold"
             >
               Book Appointment
               <ArrowUpRight size={16} strokeWidth={2} />
-            </a>
+            </TrackedLink>
           </div>
         </div>
 

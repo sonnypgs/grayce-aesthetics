@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { bookingHref, clinic, isExternalBooking } from "@/lib/site";
 import BrandLogo from "./BrandLogo";
+import TrackedLink from "./TrackedLink";
 
 export default function Contact() {
   const subject = encodeURIComponent(
@@ -36,23 +37,27 @@ export default function Contact() {
 
           <div className="surface-panel p-8 md:col-span-7 md:p-12">
             <div className="flex flex-wrap gap-3">
-              <a
+              <TrackedLink
                 href={bookingHref}
                 target={isExternalBooking ? "_blank" : undefined}
                 rel={isExternalBooking ? "noopener noreferrer" : undefined}
+                eventName="book_appointment_click"
+                eventData={{ location: "contact" }}
                 className="inline-flex h-12 items-center gap-2 rounded-full bg-[#4b594c] px-6 font-medium text-[#ffeedc]"
               >
                 <Calendar size={16} strokeWidth={2} />
                 Book Appointment
                 <ArrowUpRight size={16} strokeWidth={2} />
-              </a>
-              <a
+              </TrackedLink>
+              <TrackedLink
                 href={mailto}
+                eventName="email_click"
+                eventData={{ location: "contact", email: clinic.contact.email }}
                 className="inline-flex h-12 items-center gap-2 rounded-full border border-[rgba(75,89,76,0.18)] px-6 font-medium text-[#243028]"
               >
                 <Mail size={16} strokeWidth={2} />
                 Email Clinic
-              </a>
+              </TrackedLink>
             </div>
 
             <dl className="mt-10 grid gap-5 sm:grid-cols-2">
@@ -62,13 +67,15 @@ export default function Contact() {
                 </dt>
                 <dd className="mt-3 space-y-1">
                   {clinic.contact.phones.map((phone) => (
-                    <a
+                    <TrackedLink
                       key={phone}
                       href={`tel:${phone}`}
+                      eventName="phone_click"
+                      eventData={{ location: "contact", phone }}
                       className="block font-display text-xl font-semibold text-[#243028]"
                     >
                       {phone}
-                    </a>
+                    </TrackedLink>
                   ))}
                 </dd>
               </div>
@@ -78,14 +85,16 @@ export default function Contact() {
                   <Instagram size={14} /> Instagram
                 </dt>
                 <dd className="mt-3">
-                  <a
+                  <TrackedLink
                     href={ig}
                     target="_blank"
                     rel="noopener noreferrer"
+                    eventName="instagram_profile_click"
+                    eventData={{ location: "contact" }}
                     className="font-display text-xl font-semibold text-[#243028]"
                   >
                     {clinic.contact.instagram}
-                  </a>
+                  </TrackedLink>
                 </dd>
               </div>
 
