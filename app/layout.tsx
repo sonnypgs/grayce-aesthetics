@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter, Pinyon_Script } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { isMaintenanceMode } from "@/lib/maintenance";
+import { isPreviewNoindex } from "@/lib/preview-gate";
 import { brand, clinic } from "@/lib/site";
 import "./globals.css";
 
@@ -27,19 +28,27 @@ const pinyon = Pinyon_Script({
   weight: ["400"],
 });
 
+const shouldNoindex = isMaintenanceMode || isPreviewNoindex;
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://grayce-aesthetics.com"),
   title: isMaintenanceMode
     ? "Grayce Medical Aesthetic Clinic | Maintenance"
+    : isPreviewNoindex
+      ? "Grayce Medical Aesthetic Clinic | Preview"
     : "Grayce Medical Aesthetic Clinic | Parañaque",
   description:
     isMaintenanceMode
       ? "Grayce Medical Aesthetic Clinic is currently refreshing its website."
       : "Physician-led medical aesthetic clinic in Parañaque City, led by Dr. Mary Grace Braga.",
-  robots: isMaintenanceMode
+  robots: shouldNoindex
     ? {
         index: false,
         follow: false,
+        googleBot: {
+          index: false,
+          follow: false,
+        },
       }
     : undefined,
   icons: {

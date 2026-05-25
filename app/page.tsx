@@ -10,15 +10,31 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import MaintenancePage from "@/components/MaintenancePage";
 import MobileParallax from "@/components/MobileParallax";
+import PreviewGate from "@/components/PreviewGate";
 import ScrollAnimator from "@/components/ScrollAnimator";
 import SmoothScroll from "@/components/SmoothScroll";
 import { isMaintenanceMode } from "@/lib/maintenance";
+import { isPreviewGateEnabled, previewPasswordHash } from "@/lib/preview-gate";
 
 export default function Page() {
   if (isMaintenanceMode) {
     return <MaintenancePage />;
   }
 
+  const site = <SiteContent />;
+
+  if (isPreviewGateEnabled) {
+    return (
+      <PreviewGate passwordHash={previewPasswordHash}>
+        {site}
+      </PreviewGate>
+    );
+  }
+
+  return site;
+}
+
+function SiteContent() {
   return (
     <>
       <Nav />

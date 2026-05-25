@@ -1,5 +1,3 @@
-const enabledValues = new Set(["1", "true", "yes", "on"]);
+import { isEnabled } from "./env";
 
-export const isMaintenanceMode = enabledValues.has(
-  (process.env.MAINTENANCE_MODE || "").trim().toLowerCase()
-);
+export const isMaintenanceMode = isEnabled(process.env.MAINTENANCE_MODE);

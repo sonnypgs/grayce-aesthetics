@@ -27,6 +27,11 @@ Set `MAINTENANCE_MODE=on` in Vercel to render the temporary maintenance page on
 the next build. Accepted enabled values are `1`, `true`, `yes`, and `on`.
 Remove the variable or set it to `off`, then redeploy, to restore the full site.
 
+## Preview access
+
+See [`docs/preview-access.md`](docs/preview-access.md) for the public preview
+password gate and noindex setup.
+
 ## Deployment
 
 Hosted on Vercel as project `grayce-aesthetics`. Pushes to `main` on
