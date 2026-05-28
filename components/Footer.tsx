@@ -5,6 +5,7 @@ import BrandLogo from "./BrandLogo";
 const links = [
   { href: "#about", label: "Doctor" },
   { href: "#services", label: "Treatments" },
+  { href: "#promos", label: "Promos" },
   { href: "#clinic", label: "Clinic" },
   { href: "#instagram", label: "Instagram" },
   { href: "#reviews", label: "Reviews" },

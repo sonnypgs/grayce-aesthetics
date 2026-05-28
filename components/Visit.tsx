@@ -81,7 +81,7 @@ export default function Visit() {
         <SectionHeading
           eyebrow="Visit"
           title="Find us in San Antonio Valley 1."
-          intro="Appointments are handled directly through the clinic, with online Fresha booking ready to connect once the final booking link is available."
+          intro="Appointments are handled directly through the clinic, with Fresha ready for online booking, live availability, and current promo details."
         />
 
         <div className="mt-14 grid gap-8 md:grid-cols-12">

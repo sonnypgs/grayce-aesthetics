@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
+import Promos from "@/components/Promos";
 import Clinic from "@/components/Clinic";
 import SocialFeed from "@/components/SocialFeed";
 import Testimonials from "@/components/Testimonials";
@@ -41,6 +42,7 @@ function SiteContent() {
       <main className="relative">
         <Hero />
         <Services />
+        <Promos />
         <Clinic />
         <SocialFeed />
         <Testimonials />

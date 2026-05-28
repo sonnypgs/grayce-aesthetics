@@ -30,8 +30,9 @@ export default function Contact() {
               Ready for a careful consultation?
             </h2>
             <p className="mt-6 max-w-md leading-relaxed text-[#ffeedc]/80">
-              Book online through Fresha once the clinic link is live, or
-              contact Grayce directly by phone, email, or Instagram.
+              Book online through Fresha for appointment availability and
+              current promos, or contact Grayce directly by phone, email, or
+              Instagram.
             </p>
           </div>
 
