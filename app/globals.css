@@ -359,6 +359,17 @@ body.motion-ready #instagram.section-visible article:nth-of-type(6) { transition
   }
 }
 
+@keyframes service-modal-subservice-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes service-modal-reduced-in {
   from {
     opacity: 0;
@@ -393,6 +404,11 @@ body.motion-ready #instagram.section-visible article:nth-of-type(6) { transition
   animation: service-modal-content-in 700ms cubic-bezier(0.2, 0.7, 0.2, 1) 260ms both;
 }
 
+.service-modal-subservice {
+  animation: service-modal-subservice-in 520ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  will-change: opacity, transform;
+}
+
 body.lightbox-open > header {
   opacity: 0;
   pointer-events: none;
@@ -417,6 +433,7 @@ body.lightbox-open > header {
   .reveal-5,
   .lightbox-backdrop,
   .lightbox-panel,
+  .service-modal-subservice,
   .service-modal-panel > .grid {
     animation: none;
   }

@@ -161,10 +161,13 @@ export default function Services() {
                     </p>
 
                     <div className="mt-7 border-y border-hairline">
-                      {selectedService.subcategories.map((item) => (
+                      {selectedService.subcategories.map((item, itemIndex) => (
                         <article
                           key={item.title}
-                          className="grid grid-cols-[4.75rem_1fr] gap-4 border-b border-hairline py-4 last:border-b-0 sm:grid-cols-[5.5rem_1fr] sm:gap-5"
+                          className="service-modal-subservice grid grid-cols-[4.75rem_1fr] gap-4 border-b border-hairline py-4 last:border-b-0 sm:grid-cols-[5.5rem_1fr] sm:gap-5"
+                          style={{
+                            animationDelay: `${520 + itemIndex * 95}ms`,
+                          }}
                         >
                           <div className="relative aspect-square overflow-hidden rounded-[0.75rem] border border-hairline bg-bg-soft">
                             <img
