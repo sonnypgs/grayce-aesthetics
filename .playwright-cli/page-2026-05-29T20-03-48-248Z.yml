@@ -1,0 +1,535 @@
+- generic [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Grayce Medical Aesthetic Clinic home" [ref=e4] [cursor=pointer]:
+        - /url: "#top"
+        - img "Grayce Medical Aesthetic Clinic" [ref=e5]
+        - img "Grayce Medical Aesthetic Clinic" [ref=e6]
+      - button "Open menu" [ref=e634] [cursor=pointer]:
+        - img [ref=e635]
+  - main [ref=e15]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: Physician-led aesthetic care
+        - heading "Fresh, beautiful skin starts here." [level=1] [ref=e22]
+        - paragraph [ref=e23]: Grayce is a medical aesthetic clinic in Parañaque led by Dr. Mary Grace Braga, pairing thoughtful consultation with skin, laser, injectable, and regenerative treatments.
+        - generic [ref=e24]:
+          - link "Book Appointment" [ref=e25] [cursor=pointer]:
+            - /url: https://www.fresha.com/a/grayce-medical-aesthetic-clinic-manila-654-nuestra-sra-de-lourdes-wqxulh6r
+            - text: Book Appointment
+            - img [ref=e26]
+          - link "Call Clinic" [ref=e28] [cursor=pointer]:
+            - /url: tel:+639455564086
+            - img [ref=e29]
+            - text: Call Clinic
+      - generic [ref=e32]:
+        - figure [ref=e33]:
+          - img "Glowing skin portrait" [ref=e34]
+        - generic [ref=e36]:
+          - img [ref=e37]
+          - generic [ref=e40]:
+            - generic [ref=e41]: Parañaque
+            - generic [ref=e42]: GF Asher Bldg., San Antonio Valley 1
+    - generic [ref=e45]:
+      - generic [ref=e46]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - img [ref=e50]
+            - text: Treatments
+          - heading "A focused menu, selected after consultation." [level=2] [ref=e52]
+          - paragraph [ref=e53]: The public menu is intentionally category-led. Dr. Braga confirms the exact plan, sequence, and suitability after skin assessment.
+        - link "Book Appointment" [ref=e55] [cursor=pointer]:
+          - /url: https://www.fresha.com/a/grayce-medical-aesthetic-clinic-manila-654-nuestra-sra-de-lourdes-wqxulh6r
+          - text: Book Appointment
+          - img [ref=e56]
+      - generic [ref=e59]:
+        - button "01 Skin Health Facials Collagen, acne-clearing, brightening, diamond, hydra, and vamp facial protocols selected after skin assessment." [expanded] [active] [ref=e60] [cursor=pointer]:
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - generic [ref=e64]: "01"
+              - img [ref=e65]
+            - heading "Skin Health Facials" [level=3] [ref=e68]
+            - paragraph [ref=e69]: Collagen, acne-clearing, brightening, diamond, hydra, and vamp facial protocols selected after skin assessment.
+        - button "02 Peels & Resurfacing Glycolic and salicylic-based peels, CO2 fractional laser, and texture-focused plans for blemishes, pores, and acne scarring." [ref=e70] [cursor=pointer]:
+          - generic [ref=e72]:
+            - generic [ref=e73]:
+              - generic [ref=e74]: "02"
+              - img [ref=e75]
+            - heading "Peels & Resurfacing" [level=3] [ref=e78]
+            - paragraph [ref=e79]: Glycolic and salicylic-based peels, CO2 fractional laser, and texture-focused plans for blemishes, pores, and acne scarring.
+        - button "03 Laser Treatments Diode laser hair reduction, diode rejuvenation, and procedure-led laser care for smoother, more even-looking skin." [ref=e80] [cursor=pointer]:
+          - generic [ref=e82]:
+            - generic [ref=e83]:
+              - generic [ref=e84]: "03"
+              - img [ref=e85]
+            - heading "Laser Treatments" [level=3] [ref=e88]
+            - paragraph [ref=e89]: Diode laser hair reduction, diode rejuvenation, and procedure-led laser care for smoother, more even-looking skin.
+        - button "04 Injectables Botulinum toxin and dermal filler treatments for facial balance, soft rejuvenation, and physician-guided refinement." [ref=e90] [cursor=pointer]:
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - generic [ref=e94]: "04"
+              - img [ref=e95]
+            - heading "Injectables" [level=3] [ref=e98]
+            - paragraph [ref=e99]: Botulinum toxin and dermal filler treatments for facial balance, soft rejuvenation, and physician-guided refinement.
+        - button "05 Body & Contouring Radiofrequency, ultrasound cavitation, mesotherapy, and body-focused treatments for tightening and contouring." [ref=e100] [cursor=pointer]:
+          - generic [ref=e102]:
+            - generic [ref=e103]:
+              - generic [ref=e104]: "05"
+              - img [ref=e105]
+            - heading "Body & Contouring" [level=3] [ref=e108]
+            - paragraph [ref=e109]: Radiofrequency, ultrasound cavitation, mesotherapy, and body-focused treatments for tightening and contouring.
+        - button "06 Regenerative Skin Skin boosters, exosomes, PRP microneedling, scar treatments, and hair-health therapies for longer-term skin quality." [ref=e110] [cursor=pointer]:
+          - generic [ref=e112]:
+            - generic [ref=e113]:
+              - generic [ref=e114]: "06"
+              - img [ref=e115]
+            - heading "Regenerative Skin" [level=3] [ref=e118]
+            - paragraph [ref=e119]: Skin boosters, exosomes, PRP microneedling, scar treatments, and hair-health therapies for longer-term skin quality.
+    - generic [ref=e120]:
+      - img [ref=e123]
+      - generic [ref=e130]:
+        - generic [ref=e132]:
+          - generic [ref=e133]:
+            - img [ref=e134]
+            - text: Promos
+          - heading "Latest offers live on Fresha." [level=2] [ref=e137]
+          - paragraph [ref=e138]: Exclusive seasonal promotions and limited-time offers are available on our Fresha page. Book with ease, at your convenience.
+          - generic [ref=e139]:
+            - link "View Fresha Promos" [ref=e140] [cursor=pointer]:
+              - /url: https://www.fresha.com/a/grayce-medical-aesthetic-clinic-manila-654-nuestra-sra-de-lourdes-wqxulh6r
+              - text: View Fresha Promos
+              - img [ref=e141]
+            - link "Ask the Clinic" [ref=e144] [cursor=pointer]:
+              - /url: "#contact"
+          - list [ref=e145]:
+            - listitem [ref=e146]:
+              - img [ref=e148]
+              - generic [ref=e150]:
+                - heading "New promos added regularly" [level=3] [ref=e151]
+                - paragraph [ref=e152]: Check back often
+            - listitem [ref=e153]:
+              - img [ref=e155]
+              - generic [ref=e158]:
+                - heading "Limited-time offers" [level=3] [ref=e159]
+                - paragraph [ref=e160]: While slots last
+            - listitem [ref=e161]:
+              - img [ref=e163]
+              - generic [ref=e166]:
+                - heading "Fresha-secured booking" [level=3] [ref=e167]
+                - paragraph [ref=e168]: Safe and seamless
+        - figure [ref=e169]
+    - generic [ref=e172]:
+      - figure "Good aesthetics should look like cared-for skin, not a different person." [ref=e174]:
+        - img "Grayce clinic lounge" [ref=e175]
+        - paragraph [ref=e178]: Good aesthetics should look like cared-for skin, not a different person.
+      - generic [ref=e180]:
+        - generic [ref=e181]:
+          - generic [ref=e182]:
+            - img [ref=e183]
+            - text: About Grayce
+          - heading "A calm room for precise work." [level=2] [ref=e185]
+          - generic [ref=e186]:
+            - paragraph [ref=e187]: Grayce Medical Aesthetic Clinic opened its doors on May 2nd 2026 grounded in the belief that intentionally taking care and improving ourselves always lead to our most natural beauty and revitalizing longevity.
+            - paragraph [ref=e188]: This clinic was developed by partners in love and in life, aesthetic medicine Dr. Mary Grace Tsai-Braga and entrepreneur Mr. Mark Lester Braga equipped with the goal of restoring and refining already existing features rather than outright redefinition.
+            - paragraph [ref=e189]: "Through evidence-based medical practice, and with the use of clinical-grade products and machines, Grayce Medical Aesthetic Clinic aims to be your trusted partner in everything: HEALTH, AESTHETICS, AND BODY WELLNESS. Largely community-based, we aspire to make aesthetic services accessible to everyone."
+        - generic [ref=e190]:
+          - article [ref=e191]:
+            - img [ref=e193]
+            - generic [ref=e196]:
+              - heading "VISION" [level=3] [ref=e197]
+              - paragraph [ref=e198]: To become the community’s most trusted partner in medical aesthetics and comprehensive body wellness, offering care that feels accessible, honest, and deeply connected to the people we serve.
+          - article [ref=e199]:
+            - img [ref=e201]
+            - generic [ref=e206]:
+              - heading "MISSION" [level=3] [ref=e207]
+              - paragraph [ref=e208]: To collaborate with patients and clients regarding their goals through evidence-based and research-backed medical practice, prioritizing safety, facial and body harmony, and personalized care.
+          - article [ref=e209]:
+            - img [ref=e211]
+            - generic [ref=e213]:
+              - heading "CORE VALUES" [level=3] [ref=e214]
+              - paragraph [ref=e215]: To practice with honesty, empathy, collaboration, innovation, and service quality, creating an experience where every treatment decision is clear, respectful, and intentionally guided.
+    - generic [ref=e217]:
+      - generic [ref=e218]:
+        - generic [ref=e220]:
+          - generic [ref=e221]:
+            - img [ref=e222]
+            - text: Instagram
+          - heading "Recent notes from the clinic." [level=2] [ref=e224]
+          - paragraph [ref=e225]: A live social feed will connect here once Meta access is approved. For now, these mock posts show the final rhythm, spacing, and content shape.
+        - link "Follow @graycemedicalaesthetics" [ref=e227] [cursor=pointer]:
+          - /url: https://instagram.com/graycemedicalaesthetics
+          - text: Follow @graycemedicalaesthetics
+          - img [ref=e228]
+      - generic [ref=e231]:
+        - article [ref=e232]:
+          - 'link "Carousel May 18 01 A quiet look inside the clinic: measured consultations, thoughtful treatment planning, and skin care that starts with listening. View on Instagram" [ref=e233] [cursor=pointer]':
+            - /url: https://instagram.com/graycemedicalaesthetics
+            - generic [ref=e234]:
+              - generic [ref=e236]:
+                - img [ref=e237]
+                - text: Carousel
+              - generic [ref=e239]: May 18
+            - generic [ref=e240]:
+              - generic [ref=e241]:
+                - generic [ref=e242]: "01"
+                - img [ref=e243]
+              - paragraph [ref=e246]: "A quiet look inside the clinic: measured consultations, thoughtful treatment planning, and skin care that starts with listening."
+              - generic [ref=e247]:
+                - text: View on Instagram
+                - img [ref=e248]
+        - article [ref=e251]:
+          - link "Post May 12 02 Hydration-focused facial care for a fresh, healthy-looking glow. Protocols are selected after skin assessment. View on Instagram" [ref=e252] [cursor=pointer]:
+            - /url: https://instagram.com/graycemedicalaesthetics
+            - generic [ref=e253]:
+              - generic [ref=e255]:
+                - img [ref=e256]
+                - text: Post
+              - generic [ref=e259]: May 12
+            - generic [ref=e260]:
+              - generic [ref=e261]:
+                - generic [ref=e262]: "02"
+                - img [ref=e263]
+              - paragraph [ref=e266]: Hydration-focused facial care for a fresh, healthy-looking glow. Protocols are selected after skin assessment.
+              - generic [ref=e267]:
+                - text: View on Instagram
+                - img [ref=e268]
+        - article [ref=e271]:
+          - link "Reel May 6 03 Laser sessions are planned around comfort, suitability, and gradual progress, never one-size-fits-all. View on Instagram" [ref=e272] [cursor=pointer]:
+            - /url: https://instagram.com/graycemedicalaesthetics
+            - generic [ref=e273]:
+              - generic [ref=e275]:
+                - img [ref=e276]
+                - text: Reel
+              - generic [ref=e278]: May 6
+            - generic [ref=e279]:
+              - generic [ref=e280]:
+                - generic [ref=e281]: "03"
+                - img [ref=e282]
+              - paragraph [ref=e285]: Laser sessions are planned around comfort, suitability, and gradual progress, never one-size-fits-all.
+              - generic [ref=e286]:
+                - text: View on Instagram
+                - img [ref=e287]
+        - article [ref=e290]:
+          - 'link "Post Apr 29 04 Radiofrequency treatment moments from the room: warm, focused, and guided by a careful clinical eye. View on Instagram" [ref=e291] [cursor=pointer]':
+            - /url: https://instagram.com/graycemedicalaesthetics
+            - generic [ref=e292]:
+              - generic [ref=e294]:
+                - img [ref=e295]
+                - text: Post
+              - generic [ref=e298]: Apr 29
+            - generic [ref=e299]:
+              - generic [ref=e300]:
+                - generic [ref=e301]: "04"
+                - img [ref=e302]
+              - paragraph [ref=e305]: "Radiofrequency treatment moments from the room: warm, focused, and guided by a careful clinical eye."
+              - generic [ref=e306]:
+                - text: View on Instagram
+                - img [ref=e307]
+        - article [ref=e310]:
+          - link "Carousel Apr 21 05 Skin health is cumulative. The best plans balance in-clinic treatment with habits that can be sustained. View on Instagram" [ref=e311] [cursor=pointer]:
+            - /url: https://instagram.com/graycemedicalaesthetics
+            - generic [ref=e312]:
+              - generic [ref=e314]:
+                - img [ref=e315]
+                - text: Carousel
+              - generic [ref=e317]: Apr 21
+            - generic [ref=e318]:
+              - generic [ref=e319]:
+                - generic [ref=e320]: "05"
+                - img [ref=e321]
+              - paragraph [ref=e324]: Skin health is cumulative. The best plans balance in-clinic treatment with habits that can be sustained.
+              - generic [ref=e325]:
+                - text: View on Instagram
+                - img [ref=e326]
+        - article [ref=e329]:
+          - 'link "Post Apr 14 06 A soft skin-glow moment from the treatment menu: natural-looking refinement, gradual progress, and care that still feels like you. View on Instagram" [ref=e330] [cursor=pointer]':
+            - /url: https://instagram.com/graycemedicalaesthetics
+            - generic [ref=e331]:
+              - generic [ref=e333]:
+                - img [ref=e334]
+                - text: Post
+              - generic [ref=e337]: Apr 14
+            - generic [ref=e338]:
+              - generic [ref=e339]:
+                - generic [ref=e340]: "06"
+                - img [ref=e341]
+              - paragraph [ref=e344]: "A soft skin-glow moment from the treatment menu: natural-looking refinement, gradual progress, and care that still feels like you."
+              - generic [ref=e345]:
+                - text: View on Instagram
+                - img [ref=e346]
+    - generic [ref=e350]:
+      - generic [ref=e351]:
+        - generic [ref=e353]:
+          - generic [ref=e354]:
+            - img [ref=e355]
+            - text: Google Reviews
+          - heading "Patient words, held with care." [level=2] [ref=e357]
+          - paragraph [ref=e358]: These mock testimonials reserve the space for Google Business Profile reviews once access is connected.
+        - link "Read Google Reviews" [ref=e360] [cursor=pointer]:
+          - /url: https://www.google.com/search?q=Grayce+Medical+Aesthetic+Clinic+reviews
+          - text: Read Google Reviews
+          - img [ref=e361]
+      - generic [ref=e364]:
+        - article [ref=e365]:
+          - img [ref=e367]
+          - generic [ref=e370]:
+            - generic [ref=e371]:
+              - img [ref=e372]
+              - img [ref=e374]
+              - img [ref=e376]
+              - img [ref=e378]
+              - img [ref=e380]
+            - paragraph [ref=e382]: "\"The consultation felt very thorough and calm. Dr. Braga explained the options clearly and recommended a plan that made sense for my skin.\""
+            - generic [ref=e383]:
+              - generic [ref=e384]:
+                - generic [ref=e385]: Google Review 01
+                - heading "Alyssa M." [level=3] [ref=e386]
+                - paragraph [ref=e387]: May 2026
+              - link "Read Alyssa M.'s review on Google" [ref=e388] [cursor=pointer]:
+                - /url: https://www.google.com/search?q=Grayce+Medical+Aesthetic+Clinic+reviews
+                - img [ref=e389]
+        - article [ref=e392]:
+          - img [ref=e394]
+          - generic [ref=e397]:
+            - generic [ref=e398]:
+              - img [ref=e399]
+              - img [ref=e401]
+              - img [ref=e403]
+              - img [ref=e405]
+              - img [ref=e407]
+            - paragraph [ref=e409]: "\"Beautiful clinic and very kind staff. I appreciated that the treatment was not rushed and every step was explained before starting.\""
+            - generic [ref=e410]:
+              - generic [ref=e411]:
+                - generic [ref=e412]: Google Review 02
+                - heading "Camille R." [level=3] [ref=e413]
+                - paragraph [ref=e414]: April 2026
+              - link "Read Camille R.'s review on Google" [ref=e415] [cursor=pointer]:
+                - /url: https://www.google.com/search?q=Grayce+Medical+Aesthetic+Clinic+reviews
+                - img [ref=e416]
+        - article [ref=e419]:
+          - img [ref=e421]
+          - generic [ref=e424]:
+            - generic [ref=e425]:
+              - img [ref=e426]
+              - img [ref=e428]
+              - img [ref=e430]
+              - img [ref=e432]
+              - img [ref=e434]
+            - paragraph [ref=e436]: "\"My skin felt refreshed after the session, and the aftercare guidance was practical. It felt professional from booking to follow-up.\""
+            - generic [ref=e437]:
+              - generic [ref=e438]:
+                - generic [ref=e439]: Google Review 03
+                - heading "Nina P." [level=3] [ref=e440]
+                - paragraph [ref=e441]: March 2026
+              - link "Read Nina P.'s review on Google" [ref=e442] [cursor=pointer]:
+                - /url: https://www.google.com/search?q=Grayce+Medical+Aesthetic+Clinic+reviews
+                - img [ref=e443]
+    - generic [ref=e447]:
+      - figure [ref=e449]:
+        - img "Dr. Mary Grace Braga" [ref=e450]
+      - generic [ref=e451]:
+        - generic [ref=e452]:
+          - generic [ref=e453]:
+            - img [ref=e454]
+            - text: About the Doctor
+          - heading "Dr. Mary Grace Braga" [level=2] [ref=e456]
+          - paragraph [ref=e457]: Dr. Mary Grace Braga brings a physician-led, evidence-based approach to skin health and aesthetic treatments in Parañaque. Her practice combines careful consultation, medical training, and refined technique so every plan feels personal, measured, and safe.
+        - generic [ref=e458]:
+          - article [ref=e459]:
+            - img [ref=e461]
+            - heading "Doctor of Medicine" [level=3] [ref=e464]
+            - paragraph [ref=e465]: University of Perpetual Help DALTA Jonelta Foundation School of Medicine, 2016
+          - article [ref=e466]:
+            - img [ref=e468]
+            - heading "Master in Public Health" [level=3] [ref=e472]
+            - paragraph [ref=e473]: College of Public Health, University of the Philippines Manila, 2024
+          - article [ref=e474]:
+            - img [ref=e476]
+            - heading "PRC Licensed Physician" [level=3] [ref=e479]
+            - paragraph [ref=e480]: Physician Licensure Examination, March 2018
+          - article [ref=e481]:
+            - img [ref=e483]
+            - heading "Aesthetic Medicine" [level=3] [ref=e486]
+            - paragraph [ref=e487]: AMIPI Level I and II Certificate Courses, 2025
+        - paragraph [ref=e489]: "A quieter kind of aesthetic medicine: personal, precise, and paced around trust."
+    - generic [ref=e491]:
+      - generic [ref=e492]:
+        - generic [ref=e493]:
+          - img [ref=e494]
+          - text: Visit
+        - heading "Find us in San Antonio Valley 1." [level=2] [ref=e496]
+        - paragraph [ref=e497]: Appointments are handled directly through the clinic, with Fresha ready for online booking, live availability, and current promo details.
+      - generic [ref=e498]:
+        - generic [ref=e499]:
+          - generic [ref=e500]:
+            - generic [ref=e501]:
+              - img [ref=e502]
+              - text: Address
+            - generic [ref=e505]:
+              - text: GF Asher Bldg.
+              - text: 654 Nuestra Sra. De Lourdes Ave.
+              - text: San Antonio Valley 1, Parañaque City
+            - paragraph [ref=e506]: Metro Manila, Philippines
+            - generic [ref=e507]:
+              - link "Google Maps" [ref=e508] [cursor=pointer]:
+                - /url: https://www.google.com/maps/search/?api=1&query=GF%20Asher%20Bldg%20654%20Nuestra%20Sra.%20De%20Lourdes%20Ave%20San%20Antonio%20Valley%201%20Paranaque%20City
+                - img [ref=e509]
+                - text: Google Maps
+              - link "Waze" [ref=e513] [cursor=pointer]:
+                - /url: https://www.waze.com/ul?ll=14.4676%2C121.0207&navigate=yes
+                - img [ref=e514]
+                - text: Waze
+          - generic [ref=e518]:
+            - generic [ref=e519]:
+              - img [ref=e520]
+              - text: Hours
+            - generic [ref=e523]:
+              - generic [ref=e524]:
+                - term [ref=e525]: Tuesday - Friday
+                - definition [ref=e526]: 10:00 AM - 7:00 PM
+              - generic [ref=e527]:
+                - term [ref=e528]: Saturday
+                - definition [ref=e529]: 10:00 AM - 5:00 PM
+              - generic [ref=e530]:
+                - term [ref=e531]: Sunday & Monday
+                - definition [ref=e532]: Closed
+          - generic [ref=e533]:
+            - generic [ref=e534]:
+              - img [ref=e535]
+              - text: Arrival
+            - paragraph [ref=e539]: Search for Grayce Medical Aesthetic Clinic or GF Asher Bldg. on 654 Nuestra Sra. De Lourdes Ave. for the most direct route.
+        - generic [ref=e541]:
+          - img "OpenStreetMap view of Grayce Medical Aesthetic Clinic area" [ref=e542]
+          - generic:
+            - generic:
+              - img
+          - generic [ref=e544]: © OSM contributors
+          - generic [ref=e545]:
+            - generic [ref=e546]:
+              - generic [ref=e547]: OpenStreetMap Area View
+              - heading "GF Asher Bldg., 654 Nuestra Sra. De Lourdes Ave." [level=3] [ref=e548]
+              - paragraph [ref=e549]: San Antonio Valley 1, Parañaque City
+            - link "Open Map" [ref=e550] [cursor=pointer]:
+              - /url: https://www.openstreetmap.org/?mlat=14.4676&mlon=121.0207#map=15/14.4676/121.0207
+    - generic [ref=e553]:
+      - generic [ref=e554]:
+        - img "Grayce Medical Aesthetic Clinic" [ref=e555]
+        - heading "Ready for a careful consultation?" [level=2] [ref=e556]
+        - paragraph [ref=e557]: Book online through Fresha for appointment availability and current promos, or contact Grayce directly by phone, email, or Instagram.
+      - generic [ref=e558]:
+        - generic [ref=e559]:
+          - link "Book Appointment" [ref=e560] [cursor=pointer]:
+            - /url: https://www.fresha.com/a/grayce-medical-aesthetic-clinic-manila-654-nuestra-sra-de-lourdes-wqxulh6r
+            - img [ref=e561]
+            - text: Book Appointment
+            - img [ref=e563]
+          - link "Email Clinic" [ref=e566] [cursor=pointer]:
+            - /url: mailto:graycemedicalaesthetics@gmail.com?subject=Appointment%20Request%20-%20Grayce%20Medical%20Aesthetic%20Clinic&body=Hello%20Grayce%2C%0A%0AI'd%20like%20to%20book%20an%20appointment.%0A%0AName%3A%0APreferred%20date%20%2F%20time%3A%0ATreatment%20or%20concern%3A%0A%0AThank%20you.
+            - img [ref=e567]
+            - text: Email Clinic
+        - generic [ref=e570]:
+          - generic [ref=e571]:
+            - term [ref=e572]:
+              - img [ref=e573]
+              - text: Phone
+            - definition [ref=e575]:
+              - link "+639455564086" [ref=e576] [cursor=pointer]:
+                - /url: tel:+639455564086
+              - link "+639681186488" [ref=e577] [cursor=pointer]:
+                - /url: tel:+639681186488
+          - generic [ref=e578]:
+            - term [ref=e579]:
+              - img [ref=e580]
+              - text: Instagram
+            - definition [ref=e583]:
+              - link "@graycemedicalaesthetics" [ref=e584] [cursor=pointer]:
+                - /url: https://instagram.com/graycemedicalaesthetics
+          - generic [ref=e585]:
+            - term [ref=e586]:
+              - img [ref=e587]
+              - text: Visit
+            - definition [ref=e590]:
+              - text: GF Asher Bldg., 654 Nuestra Sra. De Lourdes Ave.
+              - text: San Antonio Valley 1, Parañaque City
+  - contentinfo [ref=e591]:
+    - generic [ref=e592]:
+      - generic [ref=e593]:
+        - generic [ref=e594]:
+          - img "Grayce Medical Aesthetic Clinic" [ref=e596]
+          - paragraph [ref=e597]: Medical aesthetics, delivered with grace. Physician-led skin, laser, injectable, and regenerative aesthetic care in Parañaque City.
+        - generic [ref=e598]:
+          - generic [ref=e599]: Explore
+          - list [ref=e600]:
+            - listitem [ref=e601]:
+              - link "Doctor" [ref=e602] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=e603]:
+              - link "Treatments" [ref=e604] [cursor=pointer]:
+                - /url: "#services"
+            - listitem [ref=e605]:
+              - link "Promos" [ref=e606] [cursor=pointer]:
+                - /url: "#promos"
+            - listitem [ref=e607]:
+              - link "Clinic" [ref=e608] [cursor=pointer]:
+                - /url: "#clinic"
+            - listitem [ref=e609]:
+              - link "Instagram" [ref=e610] [cursor=pointer]:
+                - /url: "#instagram"
+            - listitem [ref=e611]:
+              - link "Reviews" [ref=e612] [cursor=pointer]:
+                - /url: "#reviews"
+            - listitem [ref=e613]:
+              - link "Visit" [ref=e614] [cursor=pointer]:
+                - /url: "#visit"
+            - listitem [ref=e615]:
+              - link "Contact" [ref=e616] [cursor=pointer]:
+                - /url: "#contact"
+        - generic [ref=e617]:
+          - generic [ref=e618]: Contact
+          - list [ref=e619]:
+            - listitem [ref=e620]:
+              - link "+639455564086" [ref=e621] [cursor=pointer]:
+                - /url: tel:+639455564086
+            - listitem [ref=e622]:
+              - link "+639681186488" [ref=e623] [cursor=pointer]:
+                - /url: tel:+639681186488
+            - listitem [ref=e624]:
+              - link "graycemedicalaesthetics@gmail.com" [ref=e625] [cursor=pointer]:
+                - /url: mailto:graycemedicalaesthetics@gmail.com
+            - listitem [ref=e626]:
+              - link "@graycemedicalaesthetics" [ref=e627] [cursor=pointer]:
+                - /url: https://instagram.com/graycemedicalaesthetics
+                - img [ref=e628]
+                - text: "@graycemedicalaesthetics"
+      - generic [ref=e632]: © 2026 Grayce Medical Aesthetic Clinic. All rights reserved.
+  - alert [ref=e633]
+  - generic [ref=e636]:
+    - button "Dismiss treatment details" [ref=e637] [cursor=pointer]
+    - dialog "Skin Health Facials" [ref=e638]:
+      - button "Close treatment details" [ref=e639] [cursor=pointer]
+      - generic [ref=e643]:
+        - figure "Treatment 01 Skin Health Facials" [ref=e644]:
+          - generic [ref=e646]:
+            - generic [ref=e647]: Treatment 01
+            - paragraph [ref=e648]: Skin Health Facials
+        - generic [ref=e650]:
+          - paragraph [ref=e651]: Treatment Details
+          - heading "Skin Health Facials" [level=3] [ref=e652]
+          - paragraph [ref=e653]: Facial protocols are selected after skin assessment, with attention to hydration, congestion, texture, sensitivity, and treatment readiness.
+          - generic [ref=e654]:
+            - article [ref=e655]:
+              - generic [ref=e657]:
+                - heading "Hydra & Diamond Facials" [level=4] [ref=e658]
+                - paragraph [ref=e659]: Cleansing, exfoliation, extraction support, and hydration-focused care for a fresher skin feel.
+            - article [ref=e660]:
+              - generic [ref=e662]:
+                - heading "Collagen & Brightening Facials" [level=4] [ref=e663]
+                - paragraph [ref=e664]: Glow-focused protocols for dullness, uneven tone, and skin that needs a gentle refresh.
+            - article [ref=e665]:
+              - generic [ref=e667]:
+                - heading "Acne-Clearing & Vamp Facials" [level=4] [ref=e668]
+                - paragraph [ref=e669]: More targeted sessions for breakout-prone skin, post-acne marks, and skin-recovery support.
+          - link "Book Consultation" [ref=e671] [cursor=pointer]:
+            - /url: https://www.fresha.com/a/grayce-medical-aesthetic-clinic-manila-654-nuestra-sra-de-lourdes-wqxulh6r
+            - text: Book Consultation
+            - img [ref=e672]
