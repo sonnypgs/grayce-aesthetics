@@ -113,7 +113,7 @@ export default function Services() {
               role="dialog"
               aria-modal="true"
               aria-labelledby="treatment-dialog-title"
-              className="absolute inset-0 overflow-y-auto bg-[#fff7ed] text-[#243028] shadow-soft-xl md:inset-y-6 md:left-1/2 md:right-auto md:w-[min(calc(100vw-2rem),50rem)] md:max-w-none md:-translate-x-1/2 md:rounded-[1.75rem] lg:w-[min(calc(100vw-4rem),72rem)] lg:overflow-hidden"
+              className="service-modal-panel absolute inset-0 overflow-y-auto bg-[#fff7ed] text-[#243028] shadow-soft-xl md:inset-y-6 md:left-1/2 md:right-auto md:w-[min(calc(100vw-2rem),50rem)] md:max-w-none md:rounded-[1.75rem] lg:w-[min(calc(100vw-4rem),72rem)] lg:overflow-hidden"
             >
               <button
                 type="button"
