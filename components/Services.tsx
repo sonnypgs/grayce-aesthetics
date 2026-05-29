@@ -106,7 +106,7 @@ export default function Services() {
               type="button"
               aria-label="Dismiss treatment details"
               onClick={() => setSelectedIndex(null)}
-              className="absolute inset-0 hidden bg-[#243028]/62 backdrop-blur-[2px] md:block"
+              className="lightbox-backdrop absolute inset-0 bg-[#111711]/84 backdrop-blur-[3px] md:bg-[#111711]/80 lg:bg-[#243028]/70"
             />
 
             <div
