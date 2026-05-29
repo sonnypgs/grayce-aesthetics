@@ -98,36 +98,168 @@ export const serviceGroups = [
     image: photos.hydrafacialHandpiece,
     summary:
       "Collagen, acne-clearing, brightening, diamond, hydra, and vamp facial protocols selected after skin assessment.",
+    detail:
+      "Facial protocols are selected after skin assessment, with attention to hydration, congestion, texture, sensitivity, and treatment readiness.",
+    subcategories: [
+      {
+        title: "Hydra & Diamond Facials",
+        image: photos.hydrafacialDevice,
+        text:
+          "Cleansing, exfoliation, extraction support, and hydration-focused care for a fresher skin feel.",
+      },
+      {
+        title: "Collagen & Brightening Facials",
+        image: photos.brightSkin,
+        text:
+          "Glow-focused protocols for dullness, uneven tone, and skin that needs a gentle refresh.",
+      },
+      {
+        title: "Acne-Clearing & Vamp Facials",
+        image: photos.facialHandpiece,
+        text:
+          "More targeted sessions for breakout-prone skin, post-acne marks, and skin-recovery support.",
+      },
+    ],
   },
   {
     title: "Peels & Resurfacing",
     image: photos.serumDrop,
     summary:
       "Glycolic and salicylic-based peels, CO2 fractional laser, and texture-focused plans for blemishes, pores, and acne scarring.",
+    detail:
+      "Resurfacing work is planned conservatively, balancing visible refinement with skin tolerance, downtime, and aftercare needs.",
+    subcategories: [
+      {
+        title: "Glycolic Peels",
+        image: photos.serumDrop,
+        text:
+          "A brightening peel option commonly chosen for dullness, roughness, and uneven-looking skin tone.",
+      },
+      {
+        title: "Salicylic Peels",
+        image: photos.skinLaser,
+        text:
+          "Oil- and congestion-focused peel care for blemish-prone skin and visible pore concerns.",
+      },
+      {
+        title: "CO2 Fractional Laser",
+        image: photos.coolingCloseup,
+        text:
+          "A physician-guided resurfacing option for texture, pores, acne scarring, and deeper refinement goals.",
+      },
+    ],
   },
   {
     title: "Laser Treatments",
     image: photos.coolingLaser,
     summary:
       "Diode laser hair reduction, diode rejuvenation, and procedure-led laser care for smoother, more even-looking skin.",
+    detail:
+      "Laser plans are matched to the concern, area, skin type, and comfort level, with clear expectations before each session.",
+    subcategories: [
+      {
+        title: "Diode Laser Hair Reduction",
+        image: photos.legs,
+        text:
+          "Progressive hair-reduction sessions for selected body and facial areas after suitability review.",
+      },
+      {
+        title: "Diode Rejuvenation",
+        image: photos.coolingLaser,
+        text:
+          "Light-based skin refresh care for smoother, brighter, more even-looking skin quality.",
+      },
+      {
+        title: "Focused Laser Care",
+        image: photos.deviceDisplay,
+        text:
+          "Procedure-led sessions for specific concerns, planned around safety, comfort, and gradual progress.",
+      },
+    ],
   },
   {
     title: "Injectables",
     image: photos.lips,
     summary:
       "Botulinum toxin and dermal filler treatments for facial balance, soft rejuvenation, and physician-guided refinement.",
+    detail:
+      "Injectable treatments are consultation-led and intentionally measured, with facial harmony and natural movement kept central.",
+    subcategories: [
+      {
+        title: "Botulinum Toxin",
+        image: photos.complexions,
+        text:
+          "Softening selected expression lines while preserving a rested, natural-looking result.",
+      },
+      {
+        title: "Dermal Fillers",
+        image: photos.lips,
+        text:
+          "Structure, contour, or hydration support for suitable areas after physician assessment.",
+      },
+      {
+        title: "Facial Balancing",
+        image: photos.diversePortrait,
+        text:
+          "A measured plan for proportion and refinement rather than isolated feature changes.",
+      },
+    ],
   },
   {
     title: "Body & Contouring",
     image: photos.rfTreatment,
     summary:
       "Radiofrequency, ultrasound cavitation, mesotherapy, and body-focused treatments for tightening and contouring.",
+    detail:
+      "Body-focused treatments are planned around the target area, skin laxity, body goals, and realistic session sequencing.",
+    subcategories: [
+      {
+        title: "Radiofrequency",
+        image: photos.rfTreatment,
+        text:
+          "Warmth-based tightening support for selected body areas and skin-firmness concerns.",
+      },
+      {
+        title: "Ultrasound Cavitation",
+        image: photos.rfDevice,
+        text:
+          "Contour-focused sessions for suitable areas, often planned as a series.",
+      },
+      {
+        title: "Mesotherapy",
+        image: photos.neck,
+        text:
+          "Targeted body-wellness support selected after consultation and suitability review.",
+      },
+    ],
   },
   {
     title: "Regenerative Skin",
     image: photos.facialHandpiece,
     summary:
       "Skin boosters, exosomes, PRP microneedling, scar treatments, and hair-health therapies for longer-term skin quality.",
+    detail:
+      "Regenerative treatments focus on cumulative skin quality, repair signals, and longer-term improvement rather than a one-visit finish.",
+    subcategories: [
+      {
+        title: "Skin Boosters & Exosomes",
+        image: photos.serumDrop,
+        text:
+          "Hydration, glow, and repair-support treatments for skin that needs deeper quality work.",
+      },
+      {
+        title: "PRP Microneedling",
+        image: photos.facialHandpiece,
+        text:
+          "A collagen-supporting option for texture, tone, and overall skin renewal goals.",
+      },
+      {
+        title: "Scar & Hair-Health Therapies",
+        image: photos.skinPortrait,
+        text:
+          "Targeted regenerative plans for selected scar concerns and hair-health support.",
+      },
+    ],
   },
 ];
 
@@ -180,7 +312,7 @@ export const instagramPosts: SocialPost[] = [
   {
     id: "ig_mock_005",
     mediaType: "CAROUSEL_ALBUM",
-    image: photos.skinPortrait,
+    image: photos.brightSkin,
     caption:
       "Skin health is cumulative. The best plans balance in-clinic treatment with habits that can be sustained.",
     timestamp: "2026-04-21",
@@ -189,9 +321,9 @@ export const instagramPosts: SocialPost[] = [
   {
     id: "ig_mock_006",
     mediaType: "IMAGE",
-    image: photos.doctorPortrait,
+    image: photos.diversePortrait,
     caption:
-      "Physician-led aesthetic care with Dr. Mary Grace Braga, centered on safety, clarity, and natural-looking refinement.",
+      "A soft skin-glow moment from the treatment menu: natural-looking refinement, gradual progress, and care that still feels like you.",
     timestamp: "2026-04-14",
     permalink: "https://instagram.com/graycemedicalaesthetics",
   },

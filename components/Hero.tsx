@@ -63,8 +63,8 @@ export default function Hero() {
             <div className="reveal reveal-3 relative grid gap-4 pb-8 md:grid-cols-8 md:pb-14">
               <figure className="image-grain relative aspect-[4/3] overflow-hidden rounded-t-[5rem] rounded-b-[2rem] border border-hairline bg-bg-soft shadow-soft-xl md:col-span-8 md:aspect-[5/4] md:rounded-t-[7rem]">
                 <img
-                  src={photos.brightSkin}
-                  alt="Healthy glowing skin portrait"
+                  src={photos.skinPortrait}
+                  alt="Glowing skin portrait"
                   className="mobile-parallax-media h-full w-full object-cover object-center"
                   data-mobile-parallax="36"
                 />

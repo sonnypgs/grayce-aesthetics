@@ -1,16 +1,29 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter, Pinyon_Script } from "next/font/google";
+import { Cormorant_Garamond, Pinyon_Script } from "next/font/google";
+import localFont from "next/font/local";
+import Script from "next/script";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { isMaintenanceMode } from "@/lib/maintenance";
 import { isPreviewNoindex } from "@/lib/preview-gate";
 import { brand, clinic } from "@/lib/site";
 import "./globals.css";
 
-const inter = Inter({
-  subsets: ["latin"],
+const frutiger = localFont({
+  src: [
+    {
+      path: "../public/assets/grayce/fonts/frutiger/Frutiger.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/assets/grayce/fonts/frutiger/Frutiger_bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
   variable: "--font-body",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
+  fallback: ["Arial", "Helvetica", "sans-serif"],
 });
 
 const cormorant = Cormorant_Garamond({
@@ -29,6 +42,7 @@ const pinyon = Pinyon_Script({
 });
 
 const shouldNoindex = isMaintenanceMode || isPreviewNoindex;
+const metaPixelId = "1503949454602204";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://grayce-aesthetics.com"),
@@ -74,9 +88,32 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${cormorant.variable} ${pinyon.variable}`}
+      className={`${frutiger.variable} ${cormorant.variable} ${pinyon.variable}`}
     >
       <body>
+        <Script id="meta-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window,document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '${metaPixelId}');
+            fbq('track', 'PageView');
+          `}
+        </Script>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            alt=""
+            src={`https://www.facebook.com/tr?id=${metaPixelId}&ev=PageView&noscript=1`}
+          />
+        </noscript>
         {children}
         {gtmId ? <GoogleTagManager gtmId={gtmId} /> : null}
       </body>
