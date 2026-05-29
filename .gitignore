@@ -8,6 +8,7 @@ next-env.d.ts
 .vercel
 .claude/
 .playwright-mcp/
+.playwright-cli/
 grayce-*.png
 .gstack/
 .codex/
