@@ -192,7 +192,7 @@ export default function Services() {
                       className="service-modal-action mt-6 flex flex-col items-start gap-3 sm:flex-row"
                       style={{
                         animationDelay: `${
-                          900 + selectedService.subcategories.length * 110
+                          1620 + (selectedService.subcategories.length - 1) * 150
                         }ms`,
                       }}
                     >
