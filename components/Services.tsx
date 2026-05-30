@@ -13,6 +13,16 @@ export default function Services() {
     selectedIndex === null ? null : serviceGroups[selectedIndex] ?? null;
   const selectedNumber =
     selectedIndex === null ? "" : String(selectedIndex + 1).padStart(2, "0");
+  const subserviceBaseDelay = 820;
+  const subserviceStagger = 220;
+  const subserviceDuration = 700;
+  const serviceActionDelay = selectedService
+    ? subserviceBaseDelay +
+      Math.max(0, selectedService.subcategories.length - 1) *
+        subserviceStagger +
+      subserviceDuration +
+      220
+    : 0;
 
   useEffect(() => {
     if (!selectedService) return;
@@ -166,7 +176,9 @@ export default function Services() {
                           key={item.title}
                           className="service-modal-subservice grid grid-cols-[4.75rem_1fr] gap-4 border-b border-hairline py-4 last:border-b-0 sm:grid-cols-[5.5rem_1fr] sm:gap-5"
                           style={{
-                            animationDelay: `${720 + itemIndex * 150}ms`,
+                            animationDelay: `${
+                              subserviceBaseDelay + itemIndex * subserviceStagger
+                            }ms`,
                           }}
                         >
                           <div className="relative aspect-square overflow-hidden rounded-[0.75rem] border border-hairline bg-bg-soft">
@@ -191,9 +203,7 @@ export default function Services() {
                     <div
                       className="service-modal-action mt-6 flex flex-col items-start gap-3 sm:flex-row"
                       style={{
-                        animationDelay: `${
-                          1620 + (selectedService.subcategories.length - 1) * 150
-                        }ms`,
+                        animationDelay: `${serviceActionDelay}ms`,
                       }}
                     >
                       <TrackedLink

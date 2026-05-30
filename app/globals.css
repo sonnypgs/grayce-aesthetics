@@ -407,7 +407,7 @@ body.motion-ready #instagram.section-visible article:nth-of-type(6) { transition
 }
 
 .service-modal-subservice {
-  animation: service-modal-subservice-in 720ms cubic-bezier(0.16, 0.84, 0.2, 1) both;
+  animation: service-modal-subservice-in 700ms cubic-bezier(0.16, 0.84, 0.2, 1) both;
   will-change: opacity, transform, filter;
 }
 
@@ -461,7 +461,6 @@ body.lightbox-open > header {
 
   .service-modal-action {
     animation: service-modal-reduced-in 260ms ease-out both;
-    animation-delay: 160ms !important;
     filter: none;
   }
 }
