@@ -166,7 +166,7 @@ export default function Services() {
                           key={item.title}
                           className="service-modal-subservice grid grid-cols-[4.75rem_1fr] gap-4 border-b border-hairline py-4 last:border-b-0 sm:grid-cols-[5.5rem_1fr] sm:gap-5"
                           style={{
-                            animationDelay: `${520 + itemIndex * 95}ms`,
+                            animationDelay: `${720 + itemIndex * 150}ms`,
                           }}
                         >
                           <div className="relative aspect-square overflow-hidden rounded-[0.75rem] border border-hairline bg-bg-soft">
