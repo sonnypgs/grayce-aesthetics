@@ -2,7 +2,7 @@ import { brand } from "@/lib/site";
 
 type Props = {
   className?: string;
-  mark?: "lockup" | "wordmark" | "monogram";
+  mark?: "lockup" | "wordmark" | "monogram" | "navMark";
   tone?: "color" | "light";
 };
 

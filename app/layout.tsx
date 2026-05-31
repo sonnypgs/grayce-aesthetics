@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   description:
     isMaintenanceMode
       ? "Grayce Medical Aesthetic Clinic is currently refreshing its website."
-      : "Physician-led medical aesthetic clinic in Parañaque City, led by Dr. Mary Grace Braga.",
+      : `Physician-led medical aesthetic clinic in Parañaque City, led by ${clinic.doctor.displayName}.`,
   robots: shouldNoindex
     ? {
         index: false,

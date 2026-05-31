@@ -27,8 +27,8 @@ export default function Hero() {
               <span className="font-medium text-ink">
                 {clinic.doctor.displayName}
               </span>
-              , pairing thoughtful consultation with skin, laser, injectable,
-              and regenerative treatments.
+              , pairing thoughtful consultation with facials, laser hair
+              reduction, resurfacing, body sculpting, and doctor-led procedures.
             </p>
 
             <div className="reveal reveal-4 mt-9 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center">

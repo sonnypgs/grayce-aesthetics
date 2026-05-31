@@ -26,8 +26,9 @@ export default function Footer() {
               <BrandLogo className="h-full w-full object-contain" />
             </div>
             <p className="mt-6 max-w-md text-[15px] leading-relaxed text-ink-muted">
-              {brand.tagline} Physician-led skin, laser, injectable, and
-              regenerative aesthetic care in Parañaque City.
+              {brand.tagline} Physician-led facials, peels, laser hair
+              reduction, resurfacing, body sculpting, and doctor-led procedures
+              in Parañaque City.
             </p>
           </div>
 

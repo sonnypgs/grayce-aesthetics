@@ -53,9 +53,9 @@ export default function Promos() {
       </svg>
       <div className="absolute inset-x-0 top-0 h-full bg-[radial-gradient(ellipse_at_18%_12%,rgba(255,238,220,0.16),transparent_38%),linear-gradient(180deg,rgba(36,48,40,0.08),rgba(36,48,40,0.26))] md:h-[700px]" />
       <div className="absolute bottom-[5.5rem] left-0 hidden h-72 w-36 opacity-20 md:block">
-        <div className="absolute bottom-20 left-0 h-px w-28 origin-left rotate-[-48deg] bg-[#ffeedc]" />
-        <div className="absolute bottom-28 left-0 h-px w-24 origin-left rotate-[-30deg] bg-[#ffeedc]" />
-        <div className="absolute bottom-36 left-0 h-px w-20 origin-left rotate-[-12deg] bg-[#ffeedc]" />
+        <div className="absolute bottom-20 left-0 h-px w-28 origin-left rotate-[-48deg] bg-[#66705f]/55" />
+        <div className="absolute bottom-28 left-0 h-px w-24 origin-left rotate-[-30deg] bg-[#66705f]/55" />
+        <div className="absolute bottom-36 left-0 h-px w-20 origin-left rotate-[-12deg] bg-[#66705f]/55" />
       </div>
 
       <div className="relative grid md:min-h-[700px] md:grid-cols-[minmax(0,1fr)_minmax(390px,43vw)]">
@@ -66,7 +66,7 @@ export default function Promos() {
               Promos
             </div>
 
-            <div className="mt-3 h-px w-20 bg-[#ffeedc]/46" />
+            <div className="mt-3 h-px w-20 bg-[#66705f]/75" />
 
             <h2 className="font-display mt-6 max-w-[33rem] text-[clamp(2.85rem,4.15vw,4.25rem)] font-semibold leading-[0.98] text-[#fff7ed]">
               Latest offers live on Fresha.
@@ -101,13 +101,13 @@ export default function Promos() {
               </a>
             </div>
 
-            <ul className="mt-9 max-w-[34rem] divide-y divide-[#ffeedc]/18">
+            <ul className="mt-9 max-w-[34rem] divide-y divide-[#66705f]/55">
               {promoDetails.map(({ icon: Icon, ...detail }) => (
                 <li
                   key={detail.title}
                   className="grid gap-3 py-3 sm:grid-cols-[3.5rem_1fr] sm:items-center sm:gap-5"
                 >
-                  <div className="border-[#ffeedc]/18 sm:border-r">
+                  <div className="border-[#66705f]/55 sm:border-r">
                     <Icon
                       size={22}
                       strokeWidth={1.7}

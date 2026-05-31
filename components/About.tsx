@@ -5,6 +5,10 @@ import SectionHeading from "./SectionHeading";
 const icons = [GraduationCap, Stethoscope, ShieldCheck, Award];
 
 export default function About() {
+  const bio = Array.isArray(clinic.doctor.bio)
+    ? clinic.doctor.bio
+    : [clinic.doctor.bio];
+
   return (
     <section id="about" className="section-gradient-soft scroll-mt-24 py-24 md:py-32">
       <div className="max-w-page mx-auto grid gap-12 px-6 md:grid-cols-12 md:items-center md:px-10">
@@ -12,7 +16,7 @@ export default function About() {
           <figure className="relative mx-auto aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-[2rem] border border-hairline bg-bg-soft shadow-soft-lg md:max-w-sm">
             <img
               src={photos.doctorPortrait}
-              alt="Dr. Mary Grace Braga"
+              alt="Dr. Mary Grace Tsai-Braga"
               className="mobile-parallax-media h-full w-full object-cover object-top"
               data-mobile-parallax="30"
             />
@@ -23,8 +27,13 @@ export default function About() {
           <SectionHeading
             eyebrow="About the Doctor"
             title={clinic.doctor.displayName}
-            intro={clinic.doctor.bio}
           />
+
+          <div className="mt-6 max-w-2xl space-y-4 text-lg leading-relaxed text-ink-muted">
+            {bio.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {clinic.doctor.credentials.map((item, index) => {

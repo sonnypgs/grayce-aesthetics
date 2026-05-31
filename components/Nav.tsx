@@ -16,7 +16,6 @@ const links = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const compactLogo = scrolled || open;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -53,27 +52,12 @@ export default function Nav() {
         <a
           href="#top"
           onClick={() => setOpen(false)}
-          className={`relative flex h-12 w-[86px] shrink-0 items-center justify-center overflow-hidden rounded-2xl border p-2 shadow-soft transition-all duration-500 ease-out sm:h-14 sm:w-28 lg:h-16 lg:w-32 ${
-            compactLogo
-              ? "border-[#4b594c] bg-[#4b594c]"
-              : "border-hairline bg-[#ffeedc]"
-          }`}
+          className="inline-flex h-14 w-12 shrink-0 items-center justify-center sm:h-16 sm:w-14 lg:h-[72px] lg:w-16"
           aria-label="Grayce Medical Aesthetic Clinic home"
         >
           <BrandLogo
-            className={`absolute inset-2 h-[calc(100%-1rem)] w-[calc(100%-1rem)] object-contain transition-all duration-500 ease-out ${
-              compactLogo
-                ? "scale-95 opacity-0"
-                : "scale-100 opacity-100"
-            }`}
-          />
-          <BrandLogo
-            tone="light"
-            className={`absolute inset-2 h-[calc(100%-1rem)] w-[calc(100%-1rem)] object-contain transition-all duration-500 ease-out ${
-              compactLogo
-                ? "scale-100 opacity-100"
-                : "scale-105 opacity-0"
-            }`}
+            mark="navMark"
+            className="h-full w-full object-contain"
           />
         </a>
 
